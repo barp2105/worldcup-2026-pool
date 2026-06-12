@@ -10,23 +10,23 @@
       "away": "דרום אפריקה",
       "outcome": "HOME",
       "duration": "REGULAR",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 2,
+      "awayGoals": 0,
       "homePoints": 2,
       "awayPoints": 0
     },
     {
       "id": "537328",
       "stage": "GROUP",
-      "utcDate": "2026-06-12T01:00:00Z",
+      "utcDate": "2026-06-12T02:00:00Z",
       "homeCode": "KOR",
       "awayCode": "CZE",
       "home": "דרום קוריאה",
       "away": "צ'כיה",
       "outcome": "HOME",
       "duration": "REGULAR",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 2,
+      "awayGoals": 1,
       "homePoints": 2,
       "awayPoints": 0
     }
