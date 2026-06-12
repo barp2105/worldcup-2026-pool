@@ -29,6 +29,21 @@
       "awayGoals": 1,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537333",
+      "stage": "GROUP",
+      "utcDate": "2026-06-12T19:00:00Z",
+      "homeCode": "CAN",
+      "awayCode": "BIH",
+      "home": "קנדה",
+      "away": "בוסניה",
+      "outcome": "DRAW",
+      "duration": "REGULAR",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "homePoints": 1,
+      "awayPoints": 1
     }
   ]
 }
