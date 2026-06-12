@@ -1,0 +1,13 @@
+{
+  "updatedAt": null,
+  "standings": [
+    { "rank": 1, "name": "בר", "points": 0, "matchesPlayed": 0 },
+    { "rank": 1, "name": "עומרי", "points": 0, "matchesPlayed": 0 },
+    { "rank": 1, "name": "אריאל", "points": 0, "matchesPlayed": 0 },
+    { "rank": 1, "name": "עומר", "points": 0, "matchesPlayed": 0 },
+    { "rank": 1, "name": "בנימין", "points": 0, "matchesPlayed": 0 },
+    { "rank": 1, "name": "פרטוש", "points": 0, "matchesPlayed": 0 },
+    { "rank": 1, "name": "יניב", "points": 0, "matchesPlayed": 0 },
+    { "rank": 1, "name": "ניב", "points": 0, "matchesPlayed": 0 }
+  ]
+}

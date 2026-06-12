@@ -1,0 +1,62 @@
+{
+  "_comment": "מיפוי 48 הנבחרות. he=תצוגה, fdName=שם ראשי ב-football-data, aliases=שמות חלופיים להתאמה, group=בית (מהדף של המשתמש, לתצוגה/אימות בלבד).",
+  "ARG": { "he": "ארגנטינה", "fdName": "Argentina", "aliases": [], "group": "J" },
+  "ALG": { "he": "אלג'יריה", "fdName": "Algeria", "aliases": [], "group": "J" },
+  "AUT": { "he": "אוסטריה", "fdName": "Austria", "aliases": [], "group": "J" },
+  "JOR": { "he": "ירדן", "fdName": "Jordan", "aliases": [], "group": "J" },
+
+  "MEX": { "he": "מקסיקו", "fdName": "Mexico", "aliases": [], "group": "A" },
+  "RSA": { "he": "דרום אפריקה", "fdName": "South Africa", "aliases": [], "group": "A" },
+  "KOR": { "he": "דרום קוריאה", "fdName": "South Korea", "aliases": ["Korea Republic", "Republic of Korea", "Korea, South"], "group": "A" },
+  "CZE": { "he": "צ'כיה", "fdName": "Czechia", "aliases": ["Czech Republic"], "group": "A" },
+
+  "CAN": { "he": "קנדה", "fdName": "Canada", "aliases": [], "group": "B" },
+  "SUI": { "he": "שווייץ", "fdName": "Switzerland", "aliases": [], "group": "B" },
+  "QAT": { "he": "קטאר", "fdName": "Qatar", "aliases": [], "group": "B" },
+  "BIH": { "he": "בוסניה", "fdName": "Bosnia and Herzegovina", "aliases": ["Bosnia-Herzegovina", "Bosnia & Herzegovina"], "group": "B" },
+
+  "BRA": { "he": "ברזיל", "fdName": "Brazil", "aliases": [], "group": "C" },
+  "MAR": { "he": "מרוקו", "fdName": "Morocco", "aliases": [], "group": "C" },
+  "HAI": { "he": "האיטי", "fdName": "Haiti", "aliases": [], "group": "C" },
+  "SCO": { "he": "סקוטלנד", "fdName": "Scotland", "aliases": [], "group": "C" },
+
+  "USA": { "he": "ארצות הברית", "fdName": "United States", "aliases": ["USA", "United States of America"], "group": "D" },
+  "PAR": { "he": "פרגוואי", "fdName": "Paraguay", "aliases": [], "group": "D" },
+  "AUS": { "he": "אוסטרליה", "fdName": "Australia", "aliases": [], "group": "D" },
+  "TUR": { "he": "טורקיה", "fdName": "Turkey", "aliases": ["Türkiye", "Turkiye"], "group": "D" },
+
+  "GER": { "he": "גרמניה", "fdName": "Germany", "aliases": [], "group": "E" },
+  "CUW": { "he": "קוראסאו", "fdName": "Curaçao", "aliases": ["Curacao"], "group": "E" },
+  "CIV": { "he": "חוף השנהב", "fdName": "Côte d'Ivoire", "aliases": ["Ivory Coast", "Cote d'Ivoire", "Cote dIvoire"], "group": "E" },
+  "ECU": { "he": "אקוודור", "fdName": "Ecuador", "aliases": [], "group": "E" },
+
+  "NED": { "he": "הולנד", "fdName": "Netherlands", "aliases": ["Holland"], "group": "F" },
+  "JPN": { "he": "יפן", "fdName": "Japan", "aliases": [], "group": "F" },
+  "SWE": { "he": "שבדיה", "fdName": "Sweden", "aliases": [], "group": "F" },
+  "TUN": { "he": "תוניסיה", "fdName": "Tunisia", "aliases": [], "group": "F" },
+
+  "BEL": { "he": "בלגיה", "fdName": "Belgium", "aliases": [], "group": "G" },
+  "EGY": { "he": "מצרים", "fdName": "Egypt", "aliases": [], "group": "G" },
+  "IRN": { "he": "איראן", "fdName": "Iran", "aliases": ["IR Iran", "Iran, Islamic Republic of"], "group": "G" },
+  "NZL": { "he": "ניו זילנד", "fdName": "New Zealand", "aliases": [], "group": "G" },
+
+  "ESP": { "he": "ספרד", "fdName": "Spain", "aliases": [], "group": "H" },
+  "CPV": { "he": "כף ורדה", "fdName": "Cape Verde", "aliases": ["Cabo Verde"], "group": "H" },
+  "KSA": { "he": "ערב הסעודית", "fdName": "Saudi Arabia", "aliases": [], "group": "H" },
+  "URU": { "he": "אורוגוואי", "fdName": "Uruguay", "aliases": [], "group": "H" },
+
+  "FRA": { "he": "צרפת", "fdName": "France", "aliases": [], "group": "I" },
+  "SEN": { "he": "סנגל", "fdName": "Senegal", "aliases": [], "group": "I" },
+  "IRQ": { "he": "עיראק", "fdName": "Iraq", "aliases": [], "group": "I" },
+  "NOR": { "he": "נורווגיה", "fdName": "Norway", "aliases": [], "group": "I" },
+
+  "POR": { "he": "פורטוגל", "fdName": "Portugal", "aliases": [], "group": "K" },
+  "COD": { "he": "קונגו", "fdName": "DR Congo", "aliases": ["Congo DR", "Democratic Republic of the Congo", "Congo (DR)", "DR Congo (Kinshasa)"], "group": "K" },
+  "UZB": { "he": "אוזבקיסטאן", "fdName": "Uzbekistan", "aliases": [], "group": "K" },
+  "COL": { "he": "קולומביה", "fdName": "Colombia", "aliases": [], "group": "K" },
+
+  "ENG": { "he": "אנגליה", "fdName": "England", "aliases": [], "group": "L" },
+  "CRO": { "he": "קרואטיה", "fdName": "Croatia", "aliases": [], "group": "L" },
+  "GHA": { "he": "גאנה", "fdName": "Ghana", "aliases": [], "group": "L" },
+  "PAN": { "he": "פנמה", "fdName": "Panama", "aliases": [], "group": "L" }
+}

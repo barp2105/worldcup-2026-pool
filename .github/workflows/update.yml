@@ -1,0 +1,47 @@
+name: עדכון טבלת מונדיאל
+
+on:
+  schedule:
+    # כל ~3 שעות (דקה 7 כדי לא להיתקע בעומס תחילת שעה). השעות ב-UTC.
+    - cron: "7 */3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-standings
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Update standings
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: npm run update
+
+      - name: Commit & push if data changed
+        run: |
+          if [ -n "$(git status --porcelain data/)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add data/
+            git commit -m "עדכון טבלה אוטומטי [skip ci]"
+            git push
+          else
+            echo "אין שינוי בנתונים — לא מבצע commit."
+          fi

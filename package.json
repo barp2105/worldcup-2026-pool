@@ -1,0 +1,21 @@
+{
+  "name": "worldcup-2026-pool",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "מערכת ניקוד חינמית למונדיאל 2026 - דראפט נבחרות בין חברים",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "update": "tsx src/run.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

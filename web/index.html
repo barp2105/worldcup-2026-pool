@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>מונדיאל 2026 · טבלת ההימורים</title>
+  <meta name="description" content="טבלת הניקוד של הימורי המונדיאל בין החברים" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="page">
+    <!-- כרטיס הניקוד — זה מה שמצולם לתמונה -->
+    <section id="share-card" class="card">
+      <header class="card__head">
+        <div class="title">
+          <span class="trophy">🏆</span>
+          <h1>מונדיאל 2026</h1>
+        </div>
+        <p class="subtitle">טבלת ההימורים</p>
+      </header>
+
+      <div class="table-wrap">
+        <table class="standings" aria-label="טבלת ניקוד">
+          <thead>
+            <tr>
+              <th class="col-rank">#</th>
+              <th class="col-name">משתתף</th>
+              <th class="col-points">נקודות</th>
+              <th class="col-games">משחקים</th>
+            </tr>
+          </thead>
+          <tbody id="standings-body">
+            <tr><td colspan="4" class="loading">טוען…</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="update">
+        <h2 class="update__title">העדכון האחרון</h2>
+        <p id="update-text" class="update__text">—</p>
+      </div>
+
+      <footer class="card__foot">
+        <span id="updated-at" class="updated-at"></span>
+        <span class="brand">⚽ מונדיאל 2026</span>
+      </footer>
+    </section>
+
+    <div class="actions">
+      <button id="share-btn" class="btn btn--primary" type="button">📸 שתף כתמונה</button>
+      <button id="refresh-btn" class="btn" type="button">↻ רענן</button>
+    </div>
+    <p id="status" class="status" role="status"></p>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

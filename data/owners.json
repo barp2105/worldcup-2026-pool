@@ -1,0 +1,17 @@
+{
+  "_comment": "בעלות הנבחרות (מהתמונה ששלח המשתמש). שתי קבוצות עצמאיות של 4 משתתפים, כל אחד 12 נבחרות. כל נבחרת מופיעה אצל 2 משתתפים - אחד מכל קבוצה.",
+  "groups": {
+    "1": {
+      "בר":    ["ARG", "ENG", "CRO", "COL", "MEX", "CZE", "EGY", "BIH", "PAR", "PAN", "CPV", "COD"],
+      "עומרי": ["ESP", "BRA", "BEL", "URU", "USA", "ECU", "AUS", "ALG", "GHA", "TUN", "JOR", "CUW"],
+      "אריאל": ["POR", "NED", "MAR", "TUR", "SUI", "SEN", "CAN", "SCO", "KOR", "NZL", "QAT", "HAI"],
+      "עומר":  ["FRA", "GER", "JPN", "NOR", "AUT", "SWE", "CIV", "KSA", "IRN", "UZB", "RSA", "IRQ"]
+    },
+    "2": {
+      "בנימין": ["ARG", "ENG", "BEL", "JPN", "TUR", "CAN", "CIV", "CZE", "AUS", "IRN", "IRQ", "JOR"],
+      "פרטוש":  ["BRA", "POR", "MAR", "USA", "ECU", "AUT", "PAR", "ALG", "TUN", "UZB", "NZL", "CPV"],
+      "יניב":   ["ESP", "COL", "CRO", "MEX", "KOR", "SEN", "SWE", "BIH", "KSA", "COD", "PAN", "NOR"],
+      "ניב":    ["FRA", "GER", "NED", "URU", "SUI", "EGY", "GHA", "RSA", "SCO", "QAT", "CUW", "HAI"]
+    }
+  }
+}
