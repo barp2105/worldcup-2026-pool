@@ -198,18 +198,21 @@ tr.is-last .cell-name::after { content: " 🥄"; }
 .rules-table tbody tr:last-child td { border-bottom: none; }
 .rules-note { margin-top: 14px; font-size: 12.5px; line-height: 1.7; color: var(--muted); }
 
-/* כפתור נבחרות בכל שורה */
+/* כפתור נבחרות בכל שורה — מטרת-מגע נוחה לנייד */
 .teams-btn {
-  margin-inline-start: 7px;
+  margin-inline-start: 8px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--muted);
-  font-size: 11px;
+  background: rgba(233, 196, 106, 0.12);
+  color: var(--gold-soft);
+  font-size: 12px;
   line-height: 1;
-  padding: 3px 7px;
-  border-radius: 8px;
+  padding: 8px 12px;
+  min-height: 34px;
+  border-radius: 9px;
   cursor: pointer;
   vertical-align: middle;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(233, 196, 106, 0.35);
 }
 .teams-btn:active { transform: scale(0.94); }
 
