@@ -5,6 +5,7 @@ const API_URL = "https://api.football-data.org/v4/competitions/WC/matches";
 
 const STAGE_MAP: Record<string, Stage> = {
   GROUP_STAGE: "GROUP",
+  LAST_32: "R32",
   LAST_16: "R16",
   QUARTER_FINALS: "QF",
   SEMI_FINALS: "SF",

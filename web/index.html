@@ -51,10 +51,41 @@
 
     <div class="actions">
       <button id="share-btn" class="btn btn--primary" type="button">📸 שתף כתמונה</button>
+    </div>
+    <div class="actions">
+      <button id="rules-btn" class="btn" type="button">📋 חוקי הניקוד</button>
       <button id="refresh-btn" class="btn" type="button">↻ רענן</button>
     </div>
     <p id="status" class="status" role="status"></p>
   </main>
+
+  <!-- מודאל חוקי הניקוד -->
+  <div id="rules-modal" class="modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-label="חוקי הניקוד">
+      <button class="modal__close" data-close aria-label="סגור">✕</button>
+      <h2 class="modal__title">🏆 חוקי הניקוד</h2>
+      <table class="rules-table">
+        <thead>
+          <tr><th>שלב</th><th>ניצחון</th><th>תיקו</th><th>הפסד בהארכה/פנדלים</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>שלב הבתים</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>שלב 32</td><td>3</td><td>—</td><td>1</td></tr>
+          <tr><td>שמינית גמר</td><td>3</td><td>—</td><td>1</td></tr>
+          <tr><td>רבע גמר</td><td>3</td><td>—</td><td>1</td></tr>
+          <tr><td>חצי גמר</td><td>4</td><td>—</td><td>1</td></tr>
+          <tr><td>גמר</td><td>6</td><td>—</td><td>2</td></tr>
+          <tr><td>מקום שלישי</td><td>2</td><td>—</td><td>0</td></tr>
+        </tbody>
+      </table>
+      <p class="rules-note">
+        בשלבי הנוקאאוט המפסידה מקבלת 0 אם המשחק הוכרע ב‑90/120 דקות. אם הוכרע
+        בהארכה או בפנדלים — היא מקבלת את הניקוד שבעמודה האחרונה. כל נבחרת מזכה את
+        <b>שני</b> בעליה.
+      </p>
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="./app.js"></script>

@@ -149,3 +149,51 @@ tr.is-last .cell-name::after { content: " 🥄"; }
   border-color: var(--gold);
 }
 .status { text-align: center; font-size: 13px; color: var(--muted); min-height: 18px; }
+
+/* ---- מודאל חוקים ---- */
+.modal { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; padding: 18px; z-index: 50; }
+.modal[hidden] { display: none; }
+.modal__backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(2px); }
+.modal__box {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background: linear-gradient(180deg, var(--card) 0%, var(--card-2) 100%);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 22px 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+.modal__close {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  font-size: 15px;
+  cursor: pointer;
+}
+.modal__title { text-align: center; font-size: 20px; margin-bottom: 16px; }
+
+.rules-table { width: 100%; border-collapse: collapse; }
+.rules-table th {
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 600;
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+.rules-table th:first-child { text-align: right; }
+.rules-table td {
+  font-size: 14px;
+  padding: 9px 6px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.rules-table td:first-child { text-align: right; font-weight: 600; }
+.rules-table tbody tr:last-child td { border-bottom: none; }
+.rules-note { margin-top: 14px; font-size: 12.5px; line-height: 1.7; color: var(--muted); }

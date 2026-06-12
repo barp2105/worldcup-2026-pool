@@ -29,9 +29,11 @@ function renderStandings(data) {
     return;
   }
   const maxRank = Math.max(...rows.map((r) => r.rank));
+  // מציגים כפית רק כשיש מקום אחרון יחיד (לא כשכמה תקועים יחד בתחתית).
+  const uniqueLast = rows.filter((r) => r.rank === maxRank).length === 1;
   body.innerHTML = rows
     .map((s) => {
-      const isLast = s.rank === maxRank;
+      const isLast = uniqueLast && s.rank === maxRank;
       return `<tr class="${rowClass(s, isLast)}">
         <td><span class="rank-badge">${s.rank}</span></td>
         <td class="cell-name">${escapeHtml(s.name)}</td>
@@ -120,6 +122,15 @@ async function shareImage() {
     console.error(err);
   }
 }
+
+// ---- מודאל חוקים ----
+const modal = $("#rules-modal");
+function openRules() { modal.hidden = false; }
+function closeRules() { modal.hidden = true; }
+
+$("#rules-btn").addEventListener("click", openRules);
+modal.querySelectorAll("[data-close]").forEach((el) => el.addEventListener("click", closeRules));
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeRules(); });
 
 $("#share-btn").addEventListener("click", shareImage);
 $("#refresh-btn").addEventListener("click", load);

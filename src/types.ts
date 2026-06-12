@@ -1,6 +1,6 @@
 // טיפוסים משותפים לכל המערכת.
 
-export type Stage = "GROUP" | "R16" | "QF" | "SF" | "THIRD" | "FINAL";
+export type Stage = "GROUP" | "R32" | "R16" | "QF" | "SF" | "THIRD" | "FINAL";
 export type Duration = "REGULAR" | "EXTRA_TIME" | "PENALTY_SHOOTOUT";
 export type Outcome = "HOME" | "AWAY" | "DRAW";
 
@@ -29,6 +29,7 @@ export interface KoRule {
 
 export interface Rules {
   GROUP: GroupRule;
+  R32: KoRule;
   R16: KoRule;
   QF: KoRule;
   SF: KoRule;
