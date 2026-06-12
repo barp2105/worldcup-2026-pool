@@ -29,7 +29,7 @@ function loadTeams(raw: Record<string, unknown>): TeamsMap {
 }
 
 /** משיכת תוצאות: API אם יש טוקן, אחרת fallback לקובץ ידני אם קיים. */
-async function getMatches(teams: TeamsMap): Promise<MatchResult[]> {
+async function getMatches(teams: TeamsMap): Promise<MatchResult[] | null> {
   const token = process.env.FOOTBALL_DATA_TOKEN;
   if (token) {
     console.log("משיכת תוצאות מ-football-data.org ...");
@@ -41,9 +41,12 @@ async function getMatches(teams: TeamsMap): Promise<MatchResult[]> {
     const raw = await loadJson<{ matches: unknown[] }>("results.manual.json");
     return parseMatches(raw.matches as never[], teams);
   } catch {
-    throw new Error(
-      "אין FOOTBALL_DATA_TOKEN וגם אין data/results.manual.json. הגדר את ה-secret או צור קובץ ידני."
+    // לא מוגדר עדיין (אין secret ואין קובץ ידני) — מצב הקמה תקין, לא כשל.
+    console.warn(
+      "ℹ️  לא הוגדר FOOTBALL_DATA_TOKEN ואין data/results.manual.json — מדלג על העדכון. " +
+        "הוסף את ה-secret כדי להתחיל למשוך תוצאות."
     );
+    return null;
   }
 }
 
@@ -55,6 +58,7 @@ async function main(): Promise<void> {
 
   const processedSet = new Set(processed.matchIds);
   const allMatches = await getMatches(teams);
+  if (allMatches === null) return; // לא מוגדר עדיין — יציאה נקייה.
   const finished = allMatches.length;
   const newMatches = allMatches.filter((m) => !processedSet.has(m.id));
 
