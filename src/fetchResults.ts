@@ -24,7 +24,11 @@ interface RawMatch {
   utcDate: string;
   homeTeam: RawTeam;
   awayTeam: RawTeam;
-  score?: { winner?: string | null; duration?: string };
+  score?: {
+    winner?: string | null;
+    duration?: string;
+    fullTime?: { home?: number | null; away?: number | null };
+  };
 }
 
 /** מושך את כל משחקי המונדיאל מ-football-data ומחזיר רק את אלה שהסתיימו. */
@@ -56,6 +60,7 @@ export function parseMatches(raw: RawMatch[], teams: TeamsMap): MatchResult[] {
     const homeName = m.homeTeam?.name ?? m.homeTeam?.shortName ?? "";
     const awayName = m.awayTeam?.name ?? m.awayTeam?.shortName ?? "";
 
+    const ft = m.score?.fullTime;
     out.push({
       id: String(m.id),
       stage,
@@ -64,6 +69,8 @@ export function parseMatches(raw: RawMatch[], teams: TeamsMap): MatchResult[] {
       awayCode: matchTeam(awayName),
       outcome,
       duration,
+      homeGoals: typeof ft?.home === "number" ? ft.home : null,
+      awayGoals: typeof ft?.away === "number" ? ft.away : null,
     });
   }
 

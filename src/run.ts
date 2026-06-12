@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 
 import { buildUpdate } from "./buildUpdate.js";
 import { fetchResults, parseMatches } from "./fetchResults.js";
+import { buildMatchLog } from "./matchLog.js";
 import { buildOwnerIndex, computeStandings } from "./standings.js";
 import type { MatchResult, Owners, Rules, TeamsMap } from "./types.js";
 
@@ -64,8 +65,12 @@ async function main(): Promise<void> {
 
   console.log(`משחקים שהסתיימו: ${finished}, חדשים בריצה זו: ${newMatches.length}`);
 
+  // לוג המשחקים המלא נכתב בכל ריצה: הפלט דטרמיניסטי, כך שכשאין שינוי אמיתי
+  // (אותם משחקים, אותן תוצאות) אין diff וה-Action לא יוצר commit.
+  await saveJson("matchLog.json", { matches: buildMatchLog(allMatches, rules, teams) });
+
   if (newMatches.length === 0) {
-    console.log("אין משחקים חדשים — לא כותב כלום.");
+    console.log("אין משחקים חדשים — עודכן רק matchLog (אם השתנה).");
     return;
   }
 

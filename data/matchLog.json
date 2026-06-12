@@ -1,0 +1,34 @@
+{
+  "matches": [
+    {
+      "id": "537327",
+      "stage": "GROUP",
+      "utcDate": "2026-06-11T19:00:00Z",
+      "homeCode": "MEX",
+      "awayCode": "RSA",
+      "home": "מקסיקו",
+      "away": "דרום אפריקה",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": null,
+      "awayGoals": null,
+      "homePoints": 2,
+      "awayPoints": 0
+    },
+    {
+      "id": "537328",
+      "stage": "GROUP",
+      "utcDate": "2026-06-12T01:00:00Z",
+      "homeCode": "KOR",
+      "awayCode": "CZE",
+      "home": "דרום קוריאה",
+      "away": "צ'כיה",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": null,
+      "awayGoals": null,
+      "homePoints": 2,
+      "awayPoints": 0
+    }
+  ]
+}
