@@ -87,6 +87,7 @@ function buildRosters(owners, teams) {
 // לוג כל המשחקים שהסתיימו + סדר המשתתפים (לפי הטבלה) לפירוט הניקוד.
 let matchLog = [];
 let participantOrder = [];
+let teamsMap = {};
 
 async function load() {
   setStatus("טוען נתונים…");
@@ -103,10 +104,17 @@ async function load() {
       rosters = built.names;
       rosterCodes = built.codesMap;
     }
+    if (teams) {
+      teamsMap = {};
+      for (const [code, info] of Object.entries(teams)) {
+        if (!code.startsWith("_")) teamsMap[code] = info;
+      }
+    }
     matchLog = log.matches || [];
     participantOrder = (standings.standings || []).map((s) => s.name);
     renderStandings(standings);
     renderUpdate(lastUpdate);
+    renderGroups();
     setStatus("");
   } catch (err) {
     setStatus("שגיאה בטעינת הנתונים. נסה לרענן.");
@@ -270,6 +278,90 @@ $("#breakdown-players").addEventListener("click", (e) => {
 });
 
 $("#breakdown-btn").addEventListener("click", openBreakdown);
+
+// ---- טאב הבתים ----
+// טבלאות הבתים מחושבות בצד הלקוח: הרכב הבתים מ-teams.json,
+// והתוצאות (נק' ליגה אמיתיות 3/1/0, הפרש שערים) ממשחקי שלב הבתים ב-matchLog.
+function renderGroups() {
+  const grid = $("#groups-grid");
+  const codes = Object.keys(teamsMap);
+  if (codes.length === 0) {
+    grid.innerHTML = `<p class="loading">אין נתונים עדיין</p>`;
+    return;
+  }
+
+  const stats = {};
+  for (const c of codes) stats[c] = { played: 0, gf: 0, ga: 0, pts: 0 };
+  for (const m of matchLog) {
+    if (m.stage !== "GROUP") continue;
+    const h = stats[m.homeCode];
+    const a = stats[m.awayCode];
+    if (!h || !a) continue;
+    h.played += 1;
+    a.played += 1;
+    h.gf += m.homeGoals ?? 0;
+    h.ga += m.awayGoals ?? 0;
+    a.gf += m.awayGoals ?? 0;
+    a.ga += m.homeGoals ?? 0;
+    if (m.outcome === "DRAW") {
+      h.pts += 1;
+      a.pts += 1;
+    } else if (m.outcome === "HOME") {
+      h.pts += 3;
+    } else {
+      a.pts += 3;
+    }
+  }
+
+  const byGroup = {};
+  for (const c of codes) {
+    const g = teamsMap[c].group || "?";
+    (byGroup[g] = byGroup[g] || []).push(c);
+  }
+
+  grid.innerHTML = Object.keys(byGroup)
+    .sort()
+    .map((g) => {
+      const rows = byGroup[g]
+        .map((c) => ({ he: teamsMap[c].he, ...stats[c] }))
+        .sort(
+          (x, y) =>
+            y.pts - x.pts ||
+            y.gf - y.ga - (x.gf - x.ga) ||
+            y.gf - x.gf ||
+            x.he.localeCompare(y.he, "he")
+        );
+      return `<div class="group">
+        <h3 class="group__title">בית ${g}</h3>
+        <table class="group-table">
+          <thead><tr><th class="gt-name">נבחרת</th><th>מש׳</th><th>הפרש</th><th>נק׳</th></tr></thead>
+          <tbody>${rows
+            .map((r, i) => {
+              const gd = r.gf - r.ga;
+              return `<tr class="${i < 2 ? "gt-qualify" : ""}">
+                <td class="gt-name">${escapeHtml(r.he)}</td>
+                <td>${r.played}</td>
+                <td class="gt-gd">${gd > 0 ? "+" + gd : gd}</td>
+                <td class="gt-pts">${r.pts}</td>
+              </tr>`;
+            })
+            .join("")}</tbody>
+        </table>
+      </div>`;
+    })
+    .join("");
+}
+
+// ---- בורר הטאבים ----
+document.querySelectorAll(".tab").forEach((btn) =>
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab").forEach((b) =>
+      b.classList.toggle("is-active", b === btn)
+    );
+    $("#panel-standings").hidden = btn.dataset.tab !== "standings";
+    $("#panel-groups").hidden = btn.dataset.tab !== "groups";
+  })
+);
 
 $("#share-btn").addEventListener("click", shareImage);
 $("#refresh-btn").addEventListener("click", load);

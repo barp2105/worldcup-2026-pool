@@ -33,6 +33,42 @@ body {
   gap: 16px;
 }
 
+/* ---- טאבים ---- */
+.tabs {
+  display: flex;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 5px;
+}
+.tab {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 11px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.tab.is-active {
+  background: linear-gradient(180deg, var(--gold-soft), var(--gold));
+  color: #3a2c00;
+}
+
+/* פאנל של טאב — שומר על אותו ריווח אנכי כמו .page */
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.panel[hidden] { display: none; }
+
 /* ---- כרטיס ---- */
 .card {
   background: linear-gradient(180deg, var(--card) 0%, var(--card-2) 100%);
@@ -215,6 +251,63 @@ tr.is-last .cell-name::after { content: " 🥄"; }
   -webkit-tap-highlight-color: rgba(233, 196, 106, 0.35);
 }
 .teams-btn:active { transform: scale(0.94); }
+
+/* ---- טאב הבתים ---- */
+.groups-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 460px) {
+  .groups-grid { grid-template-columns: 1fr; }
+}
+
+.group {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 10px 6px;
+}
+.group__title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 6px;
+  text-align: center;
+}
+.group-table { width: 100%; border-collapse: collapse; }
+.group-table th {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--muted);
+  padding: 4px 3px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+.group-table th.gt-name { text-align: right; }
+.group-table td {
+  font-size: 12.5px;
+  padding: 6px 3px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.group-table tbody tr:last-child td { border-bottom: none; }
+.group-table td.gt-name {
+  text-align: right;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.group-table .gt-gd { direction: ltr; unicode-bidi: isolate; color: var(--muted); }
+.group-table .gt-pts { font-weight: 800; }
+tr.gt-qualify td.gt-name { color: var(--gold-soft); }
+
+.groups-note {
+  margin-top: 12px;
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--muted);
+  text-align: center;
+}
 
 /* ---- פירוט הניקוד פר שחקן ---- */
 .modal__box--scroll {

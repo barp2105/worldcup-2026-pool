@@ -8,10 +8,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css?v=4" />
+  <link rel="stylesheet" href="./style.css?v=5" />
 </head>
 <body>
   <main class="page">
+    <!-- בורר טאבים: טבלת ההימורים / בתי המונדיאל -->
+    <nav class="tabs" aria-label="תצוגה">
+      <button class="tab is-active" type="button" data-tab="standings">🏆 טבלה</button>
+      <button class="tab" type="button" data-tab="groups">⚽ בתים</button>
+    </nav>
+
+    <div id="panel-standings" class="panel">
     <!-- כרטיס הניקוד — זה מה שמצולם לתמונה -->
     <section id="share-card" class="card">
       <header class="card__head">
@@ -59,6 +66,23 @@
       <button id="rules-btn" class="btn" type="button">📋 חוקי הניקוד</button>
       <button id="refresh-btn" class="btn" type="button">↻ רענן</button>
     </div>
+    </div>
+
+    <!-- טאב הבתים -->
+    <div id="panel-groups" class="panel" hidden>
+      <section class="card">
+        <header class="card__head">
+          <div class="title">
+            <span class="trophy">⚽</span>
+            <h1>הבתים</h1>
+          </div>
+          <p class="subtitle">מצב הבתים במונדיאל</p>
+        </header>
+        <div id="groups-grid" class="groups-grid"><p class="loading">טוען…</p></div>
+        <p class="groups-note">מכל בית עולות שתי הראשונות, ואליהן מצטרפות 8 הטובות מבין המקומות השלישיים.</p>
+      </section>
+    </div>
+
     <p id="status" class="status" role="status"></p>
   </main>
 
@@ -113,6 +137,6 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script src="./app.js?v=4"></script>
+  <script src="./app.js?v=5"></script>
 </body>
 </html>
