@@ -1,7 +1,7 @@
 // בסיס הנתונים: קבצי ה-JSON נמשכים ישירות מה-repo ב-GitHub (raw),
 // כך שעדכוני ה-Action מופיעים בלי צורך לפרוס מחדש את האתר.
 // ה-OWNER/REPO מוחלפים אוטומטית בעת הקמת ה-repo; עד אז נופלים לנתיב מקומי לבדיקה.
-const RAW_BASE = "https://raw.githubusercontent.com/__OWNER__/__REPO__/main/data";
+const RAW_BASE = "https://raw.githubusercontent.com/barp2105/worldcup-2026-pool/main/data";
 const DATA_BASE = RAW_BASE.includes("__OWNER__") ? "../data" : RAW_BASE;
 
 const $ = (sel) => document.querySelector(sel);
