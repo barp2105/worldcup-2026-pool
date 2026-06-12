@@ -1,7 +1,7 @@
 {
   "_comment": "טבלת הניקוד. GROUP: win/draw/loss. נוקאאוט: lossRegular=הוכרע ב-90/120', lossExtra=הוכרע בהארכה/פנדלים.",
   "GROUP": { "win": 2, "draw": 1, "loss": 0 },
-  "R32":   { "win": 3, "lossRegular": 0, "lossExtra": 1 },
+  "R32":   { "win": 2, "lossRegular": 0, "lossExtra": 1 },
   "R16":   { "win": 3, "lossRegular": 0, "lossExtra": 1 },
   "QF":    { "win": 3, "lossRegular": 0, "lossExtra": 1 },
   "SF":    { "win": 4, "lossRegular": 0, "lossExtra": 1 },

@@ -36,7 +36,7 @@ function renderStandings(data) {
       const isLast = uniqueLast && s.rank === maxRank;
       return `<tr class="${rowClass(s, isLast)}">
         <td><span class="rank-badge">${s.rank}</span></td>
-        <td class="cell-name">${escapeHtml(s.name)}</td>
+        <td class="cell-name">${escapeHtml(s.name)}<button class="teams-btn" type="button" data-name="${escapeHtml(s.name)}" data-html2canvas-ignore="true">נבחרות</button></td>
         <td class="cell-points">${s.points}</td>
         <td class="cell-games">${s.matchesPlayed}</td>
       </tr>`;
@@ -68,13 +68,29 @@ function escapeHtml(s) {
   );
 }
 
+// רשימת הנבחרות של כל משתתף (שם → מערך שמות בעברית). נבנה מ-owners + teams.
+let rosters = {};
+
+function buildRosters(owners, teams) {
+  const map = {};
+  for (const group of Object.values(owners.groups || {})) {
+    for (const [name, codes] of Object.entries(group)) {
+      map[name] = codes.map((c) => (teams[c] && teams[c].he) || c);
+    }
+  }
+  return map;
+}
+
 async function load() {
   setStatus("טוען נתונים…");
   try {
-    const [standings, lastUpdate] = await Promise.all([
+    const [standings, lastUpdate, owners, teams] = await Promise.all([
       fetchJson("standings.json"),
       fetchJson("lastUpdate.json").catch(() => ({ text: "—" })),
+      fetchJson("owners.json").catch(() => null),
+      fetchJson("teams.json").catch(() => null),
     ]);
+    if (owners && teams) rosters = buildRosters(owners, teams);
     renderStandings(standings);
     renderUpdate(lastUpdate);
     setStatus("");
@@ -123,14 +139,35 @@ async function shareImage() {
   }
 }
 
-// ---- מודאל חוקים ----
-const modal = $("#rules-modal");
-function openRules() { modal.hidden = false; }
-function closeRules() { modal.hidden = true; }
+// ---- מודאלים (חוקים + נבחרות) ----
+function closeAllModals() {
+  document.querySelectorAll(".modal").forEach((m) => (m.hidden = true));
+}
+document.querySelectorAll(".modal").forEach((m) => {
+  m.querySelectorAll("[data-close]").forEach((el) =>
+    el.addEventListener("click", () => (m.hidden = true))
+  );
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeAllModals();
+});
 
-$("#rules-btn").addEventListener("click", openRules);
-modal.querySelectorAll("[data-close]").forEach((el) => el.addEventListener("click", closeRules));
-document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeRules(); });
+$("#rules-btn").addEventListener("click", () => ($("#rules-modal").hidden = false));
+
+function openTeams(name) {
+  const list = rosters[name] || [];
+  $("#teams-modal-title").textContent = "הנבחרות של " + name;
+  $("#teams-list").innerHTML = list.length
+    ? list.map((t) => `<li>${escapeHtml(t)}</li>`).join("")
+    : `<li>אין נתונים</li>`;
+  $("#teams-modal").hidden = false;
+}
+
+// delegation — השורות נבנות מחדש בכל רענון
+$("#standings-body").addEventListener("click", (e) => {
+  const btn = e.target.closest(".teams-btn");
+  if (btn) openTeams(btn.dataset.name);
+});
 
 $("#share-btn").addEventListener("click", shareImage);
 $("#refresh-btn").addEventListener("click", load);

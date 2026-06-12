@@ -35,14 +35,22 @@ describe("pointsForMatch — שלב הבתים", () => {
   });
 });
 
-describe("pointsForMatch — שלב 32, שמינית ורבע גמר (3)", () => {
+describe("pointsForMatch — שלב 32 (2, עם נקודת הארכה)", () => {
+  it("ניצחון רגיל = 2, מפסידה 0", () => {
+    expect(pointsForMatch(match("R32", "HOME"), rules)).toEqual({ home: 2, away: 0 });
+  });
+  it("ניצחון בהארכה/פנדלים = 2, מפסידה 1", () => {
+    expect(pointsForMatch(match("R32", "AWAY", "EXTRA_TIME"), rules)).toEqual({ home: 1, away: 2 });
+    expect(pointsForMatch(match("R32", "HOME", "PENALTY_SHOOTOUT"), rules)).toEqual({ home: 2, away: 1 });
+  });
+});
+
+describe("pointsForMatch — שמינית ורבע גמר (3)", () => {
   it("ניצחון בזמן רגיל = 3, מפסידה 0", () => {
-    expect(pointsForMatch(match("R32", "HOME"), rules)).toEqual({ home: 3, away: 0 });
     expect(pointsForMatch(match("R16", "HOME"), rules)).toEqual({ home: 3, away: 0 });
     expect(pointsForMatch(match("QF", "HOME"), rules)).toEqual({ home: 3, away: 0 });
   });
   it("ניצחון בהארכה/פנדלים = 3, מפסידה 1", () => {
-    expect(pointsForMatch(match("R32", "AWAY", "EXTRA_TIME"), rules)).toEqual({ home: 1, away: 3 });
     expect(pointsForMatch(match("R16", "HOME", "PENALTY_SHOOTOUT"), rules)).toEqual({ home: 3, away: 1 });
     expect(pointsForMatch(match("QF", "AWAY", "EXTRA_TIME"), rules)).toEqual({ home: 1, away: 3 });
   });
