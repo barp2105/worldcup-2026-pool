@@ -216,6 +216,90 @@ tr.is-last .cell-name::after { content: " 🥄"; }
 }
 .teams-btn:active { transform: scale(0.94); }
 
+/* ---- פירוט הניקוד פר שחקן ---- */
+.modal__box--scroll {
+  max-height: 84vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.bd-players {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.bd-player {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 13px;
+  min-height: 36px;
+  border-radius: 999px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.bd-player.is-active {
+  background: linear-gradient(180deg, var(--gold-soft), var(--gold));
+  color: #3a2c00;
+  border-color: var(--gold);
+}
+
+.bd-summary {
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--muted);
+  margin-bottom: 10px;
+  min-height: 18px;
+}
+.bd-summary b { color: var(--gold-soft); }
+
+.bd-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.bd-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+.bd-pts {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 32px;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: 800;
+}
+.bd-pts--plus { background: rgba(116, 198, 157, 0.16); color: #8fe3b4; }
+.bd-pts--zero { background: rgba(255, 255, 255, 0.06); color: var(--muted); }
+
+.bd-info { min-width: 0; }
+.bd-title { font-size: 14.5px; line-height: 1.45; }
+.bd-title b { color: var(--gold-soft); }
+.bd-score { font-weight: 700; direction: ltr; unicode-bidi: isolate; }
+.bd-meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+.bd-empty {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  padding: 18px 0;
+}
+
 .teams-list {
   list-style: none;
   display: grid;

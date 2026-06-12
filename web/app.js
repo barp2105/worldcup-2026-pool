@@ -68,29 +68,43 @@ function escapeHtml(s) {
   );
 }
 
-// רשימת הנבחרות של כל משתתף (שם → מערך שמות בעברית). נבנה מ-owners + teams.
+// רשימת הנבחרות של כל משתתף: שמות בעברית לתצוגה + קודים לשיוך משחקים.
 let rosters = {};
+let rosterCodes = {};
 
 function buildRosters(owners, teams) {
-  const map = {};
+  const names = {};
+  const codesMap = {};
   for (const group of Object.values(owners.groups || {})) {
     for (const [name, codes] of Object.entries(group)) {
-      map[name] = codes.map((c) => (teams[c] && teams[c].he) || c);
+      names[name] = codes.map((c) => (teams[c] && teams[c].he) || c);
+      codesMap[name] = codes;
     }
   }
-  return map;
+  return { names, codesMap };
 }
+
+// לוג כל המשחקים שהסתיימו + סדר המשתתפים (לפי הטבלה) לפירוט הניקוד.
+let matchLog = [];
+let participantOrder = [];
 
 async function load() {
   setStatus("טוען נתונים…");
   try {
-    const [standings, lastUpdate, owners, teams] = await Promise.all([
+    const [standings, lastUpdate, owners, teams, log] = await Promise.all([
       fetchJson("standings.json"),
       fetchJson("lastUpdate.json").catch(() => ({ text: "—" })),
       fetchJson("owners.json").catch(() => null),
       fetchJson("teams.json").catch(() => null),
+      fetchJson("matchLog.json").catch(() => ({ matches: [] })),
     ]);
-    if (owners && teams) rosters = buildRosters(owners, teams);
+    if (owners && teams) {
+      const built = buildRosters(owners, teams);
+      rosters = built.names;
+      rosterCodes = built.codesMap;
+    }
+    matchLog = log.matches || [];
+    participantOrder = (standings.standings || []).map((s) => s.name);
     renderStandings(standings);
     renderUpdate(lastUpdate);
     setStatus("");
@@ -168,6 +182,94 @@ $("#standings-body").addEventListener("click", (e) => {
   const btn = e.target.closest(".teams-btn");
   if (btn) openTeams(btn.dataset.name);
 });
+
+// ---- פירוט הניקוד פר שחקן ----
+const STAGE_HE = {
+  GROUP: "שלב הבתים",
+  R32: "שלב ה־32",
+  R16: "שמינית גמר",
+  QF: "רבע גמר",
+  SF: "חצי גמר",
+  THIRD: "מקום שלישי",
+  FINAL: "גמר",
+};
+
+let breakdownSelected = null;
+
+function resultLabel(match, side) {
+  if (match.outcome === "DRAW") return "תיקו";
+  const won =
+    (match.outcome === "HOME" && side === "home") ||
+    (match.outcome === "AWAY" && side === "away");
+  let label = won ? "ניצחון" : "הפסד";
+  if (match.duration === "EXTRA_TIME") label += " בהארכה";
+  else if (match.duration === "PENALTY_SHOOTOUT") label += " בפנדלים";
+  return label;
+}
+
+// כותרת המשחק מנקודת המבט של השחקן: הנבחרת שלו מודגשת.
+function matchTitle(match, side) {
+  const home = side === "home" ? `<b>${escapeHtml(match.home)}</b>` : escapeHtml(match.home);
+  const away = side === "away" ? `<b>${escapeHtml(match.away)}</b>` : escapeHtml(match.away);
+  if (match.homeGoals != null && match.awayGoals != null) {
+    return `${home} <span class="bd-score">${match.homeGoals}–${match.awayGoals}</span> ${away}`;
+  }
+  return `${home} נגד ${away}`;
+}
+
+function renderBreakdown(name) {
+  breakdownSelected = name;
+  document.querySelectorAll(".bd-player").forEach((b) =>
+    b.classList.toggle("is-active", b.dataset.name === name)
+  );
+
+  const codes = new Set(rosterCodes[name] || []);
+  const rows = [];
+  for (const m of matchLog) {
+    if (codes.has(m.homeCode)) rows.push({ match: m, side: "home", points: m.homePoints });
+    if (codes.has(m.awayCode)) rows.push({ match: m, side: "away", points: m.awayPoints });
+  }
+  rows.reverse(); // הלוג ממוין מהישן לחדש — מציגים את החדש למעלה
+
+  const total = rows.reduce((sum, r) => sum + r.points, 0);
+  $("#breakdown-summary").innerHTML = rows.length
+    ? `סה״כ <b>${total}</b> נקודות מ־<b>${rows.length}</b> משחקים`
+    : "";
+
+  $("#breakdown-list").innerHTML = rows.length
+    ? rows
+        .map(
+          (r) => `<li class="bd-row">
+            <span class="bd-pts ${r.points > 0 ? "bd-pts--plus" : "bd-pts--zero"}">${r.points > 0 ? "+" + r.points : "0"}</span>
+            <div class="bd-info">
+              <div class="bd-title">${matchTitle(r.match, r.side)}</div>
+              <div class="bd-meta">${STAGE_HE[r.match.stage] || r.match.stage} · ${resultLabel(r.match, r.side)}</div>
+            </div>
+          </li>`
+        )
+        .join("")
+    : `<li class="bd-empty">עוד לא היו משחקים לנבחרות של ${escapeHtml(name)}</li>`;
+}
+
+function openBreakdown() {
+  const names = participantOrder.length ? participantOrder : Object.keys(rosters);
+  if (names.length === 0) return;
+  $("#breakdown-players").innerHTML = names
+    .map(
+      (n) =>
+        `<button class="bd-player" type="button" data-name="${escapeHtml(n)}">${escapeHtml(n)}</button>`
+    )
+    .join("");
+  renderBreakdown(names.includes(breakdownSelected) ? breakdownSelected : names[0]);
+  $("#breakdown-modal").hidden = false;
+}
+
+$("#breakdown-players").addEventListener("click", (e) => {
+  const btn = e.target.closest(".bd-player");
+  if (btn) renderBreakdown(btn.dataset.name);
+});
+
+$("#breakdown-btn").addEventListener("click", openBreakdown);
 
 $("#share-btn").addEventListener("click", shareImage);
 $("#refresh-btn").addEventListener("click", load);

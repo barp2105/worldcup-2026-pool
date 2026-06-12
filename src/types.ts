@@ -13,6 +13,9 @@ export interface MatchResult {
   awayCode: string;
   outcome: Outcome;
   duration: Duration;
+  /** שערים (אם הספק מספק אותם; null כשלא ידוע, למשל ב-fallback ידני). */
+  homeGoals?: number | null;
+  awayGoals?: number | null;
 }
 
 export interface GroupRule {
