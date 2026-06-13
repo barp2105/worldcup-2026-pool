@@ -59,6 +59,21 @@
       "awayGoals": 1,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537334",
+      "stage": "GROUP",
+      "utcDate": "2026-06-13T19:00:00Z",
+      "homeCode": "QAT",
+      "awayCode": "SUI",
+      "home": "קטאר",
+      "away": "שווייץ",
+      "outcome": "DRAW",
+      "duration": "REGULAR",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "homePoints": 1,
+      "awayPoints": 1
     }
   ]
 }
