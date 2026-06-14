@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-06-14T19:04:19.698Z",
+  "updatedAt": "2026-06-14T22:02:25.321Z",
   "standings": [
     {
       "rank": 1,
       "name": "אריאל",
-      "points": 8,
-      "matchesPlayed": 8
+      "points": 9,
+      "matchesPlayed": 9
     },
     {
       "rank": 2,
       "name": "ניב",
-      "points": 6,
-      "matchesPlayed": 7
+      "points": 7,
+      "matchesPlayed": 8
     },
     {
       "rank": 3,
@@ -27,27 +27,27 @@
     },
     {
       "rank": 5,
+      "name": "בנימין",
+      "points": 4,
+      "matchesPlayed": 5
+    },
+    {
+      "rank": 5,
       "name": "פרטוש",
       "points": 4,
       "matchesPlayed": 4
     },
     {
-      "rank": 6,
-      "name": "בנימין",
-      "points": 3,
-      "matchesPlayed": 4
-    },
-    {
-      "rank": 6,
+      "rank": 7,
       "name": "בר",
       "points": 3,
       "matchesPlayed": 4
     },
     {
-      "rank": 8,
+      "rank": 7,
       "name": "עומר",
-      "points": 2,
-      "matchesPlayed": 2
+      "points": 3,
+      "matchesPlayed": 3
     }
   ]
 }
