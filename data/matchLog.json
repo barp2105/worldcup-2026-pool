@@ -119,6 +119,21 @@
       "awayGoals": 0,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537351",
+      "stage": "GROUP",
+      "utcDate": "2026-06-14T17:00:00Z",
+      "homeCode": "GER",
+      "awayCode": "CUW",
+      "home": "גרמניה",
+      "away": "קוראסאו",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 7,
+      "awayGoals": 1,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
