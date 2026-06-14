@@ -74,6 +74,21 @@
       "awayGoals": 1,
       "homePoints": 1,
       "awayPoints": 1
+    },
+    {
+      "id": "537339",
+      "stage": "GROUP",
+      "utcDate": "2026-06-13T22:00:00Z",
+      "homeCode": "BRA",
+      "awayCode": "MAR",
+      "home": "ברזיל",
+      "away": "מרוקו",
+      "outcome": "DRAW",
+      "duration": "REGULAR",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "homePoints": 1,
+      "awayPoints": 1
     }
   ]
 }
