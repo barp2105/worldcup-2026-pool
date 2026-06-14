@@ -40,8 +40,8 @@
       "away": "בוסניה",
       "outcome": "DRAW",
       "duration": "REGULAR",
-      "homeGoals": 1,
-      "awayGoals": 1,
+      "homeGoals": null,
+      "awayGoals": null,
       "homePoints": 1,
       "awayPoints": 1
     },
@@ -89,6 +89,21 @@
       "awayGoals": 1,
       "homePoints": 1,
       "awayPoints": 1
+    },
+    {
+      "id": "537340",
+      "stage": "GROUP",
+      "utcDate": "2026-06-14T01:00:00Z",
+      "homeCode": "HAI",
+      "awayCode": "SCO",
+      "home": "האיטי",
+      "away": "סקוטלנד",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "homePoints": 0,
+      "awayPoints": 2
     }
   ]
 }
