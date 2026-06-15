@@ -179,6 +179,21 @@
       "awayGoals": 1,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537369",
+      "stage": "GROUP",
+      "utcDate": "2026-06-15T16:00:00Z",
+      "homeCode": "ESP",
+      "awayCode": "CPV",
+      "home": "ספרד",
+      "away": "כף ורדה",
+      "outcome": "DRAW",
+      "duration": "REGULAR",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "homePoints": 1,
+      "awayPoints": 1
     }
   ]
 }
