@@ -41,7 +41,7 @@
   "NZL": { "he": "ניו זילנד", "fdName": "New Zealand", "aliases": [], "group": "G" },
 
   "ESP": { "he": "ספרד", "fdName": "Spain", "aliases": [], "group": "H" },
-  "CPV": { "he": "כף ורדה", "fdName": "Cape Verde", "aliases": ["Cabo Verde"], "group": "H" },
+  "CPV": { "he": "כף ורדה", "fdName": "Cape Verde", "aliases": ["Cabo Verde", "Cape Verde Islands"], "group": "H" },
   "KSA": { "he": "ערב הסעודית", "fdName": "Saudi Arabia", "aliases": [], "group": "H" },
   "URU": { "he": "אורוגוואי", "fdName": "Uruguay", "aliases": [], "group": "H" },
 
