@@ -239,6 +239,21 @@
       "awayGoals": 2,
       "homePoints": 1,
       "awayPoints": 1
+    },
+    {
+      "id": "537391",
+      "stage": "GROUP",
+      "utcDate": "2026-06-16T19:00:00Z",
+      "homeCode": "FRA",
+      "awayCode": "SEN",
+      "home": "צרפת",
+      "away": "סנגל",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
