@@ -40,8 +40,8 @@
       "away": "בוסניה",
       "outcome": "DRAW",
       "duration": "REGULAR",
-      "homeGoals": 1,
-      "awayGoals": 1,
+      "homeGoals": null,
+      "awayGoals": null,
       "homePoints": 1,
       "awayPoints": 1
     },
@@ -222,6 +222,21 @@
       "duration": "REGULAR",
       "homeGoals": 1,
       "awayGoals": 1,
+      "homePoints": 1,
+      "awayPoints": 1
+    },
+    {
+      "id": "537364",
+      "stage": "GROUP",
+      "utcDate": "2026-06-16T01:00:00Z",
+      "homeCode": "IRN",
+      "awayCode": "NZL",
+      "home": "איראן",
+      "away": "ניו זילנד",
+      "outcome": "DRAW",
+      "duration": "REGULAR",
+      "homeGoals": 2,
+      "awayGoals": 2,
       "homePoints": 1,
       "awayPoints": 1
     }
