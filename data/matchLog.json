@@ -40,8 +40,8 @@
       "away": "בוסניה",
       "outcome": "DRAW",
       "duration": "REGULAR",
-      "homeGoals": 1,
-      "awayGoals": 1,
+      "homeGoals": null,
+      "awayGoals": null,
       "homePoints": 1,
       "awayPoints": 1
     },
@@ -327,6 +327,21 @@
       "duration": "REGULAR",
       "homeGoals": 4,
       "awayGoals": 2,
+      "homePoints": 2,
+      "awayPoints": 0
+    },
+    {
+      "id": "537410",
+      "stage": "GROUP",
+      "utcDate": "2026-06-17T23:00:00Z",
+      "homeCode": "GHA",
+      "awayCode": "PAN",
+      "home": "גאנה",
+      "away": "פנמה",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 1,
+      "awayGoals": 0,
       "homePoints": 2,
       "awayPoints": 0
     }
