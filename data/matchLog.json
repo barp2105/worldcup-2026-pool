@@ -40,8 +40,8 @@
       "away": "בוסניה",
       "outcome": "DRAW",
       "duration": "REGULAR",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 1,
+      "awayGoals": 1,
       "homePoints": 1,
       "awayPoints": 1
     },
@@ -374,6 +374,21 @@
       "awayGoals": 1,
       "homePoints": 1,
       "awayPoints": 1
+    },
+    {
+      "id": "537335",
+      "stage": "GROUP",
+      "utcDate": "2026-06-18T19:00:00Z",
+      "homeCode": "SUI",
+      "awayCode": "BIH",
+      "home": "שווייץ",
+      "away": "בוסניה",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
