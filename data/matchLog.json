@@ -344,6 +344,21 @@
       "awayGoals": 0,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537404",
+      "stage": "GROUP",
+      "utcDate": "2026-06-18T02:00:00Z",
+      "homeCode": "UZB",
+      "awayCode": "COL",
+      "home": "אוזבקיסטאן",
+      "away": "קולומביה",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "homePoints": 0,
+      "awayPoints": 2
     }
   ]
 }
