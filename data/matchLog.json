@@ -389,6 +389,21 @@
       "awayGoals": 1,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537336",
+      "stage": "GROUP",
+      "utcDate": "2026-06-18T22:00:00Z",
+      "homeCode": "CAN",
+      "awayCode": "QAT",
+      "home": "קנדה",
+      "away": "קטאר",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 6,
+      "awayGoals": 0,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
