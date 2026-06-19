@@ -40,8 +40,8 @@
       "away": "בוסניה",
       "outcome": "DRAW",
       "duration": "REGULAR",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 1,
+      "awayGoals": 1,
       "homePoints": 1,
       "awayPoints": 1
     },
