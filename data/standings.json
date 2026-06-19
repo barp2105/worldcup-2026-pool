@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T03:03:19.338Z",
+  "updatedAt": "2026-06-19T21:10:32.782Z",
   "standings": [
     {
       "rank": 1,
@@ -29,7 +29,7 @@
       "rank": 4,
       "name": "בנימין",
       "points": 15,
-      "matchesPlayed": 14
+      "matchesPlayed": 15
     },
     {
       "rank": 4,
@@ -40,14 +40,14 @@
     {
       "rank": 7,
       "name": "עומרי",
-      "points": 10,
-      "matchesPlayed": 12
+      "points": 12,
+      "matchesPlayed": 14
     },
     {
       "rank": 8,
       "name": "פרטוש",
-      "points": 9,
-      "matchesPlayed": 12
+      "points": 11,
+      "matchesPlayed": 13
     }
   ]
 }
