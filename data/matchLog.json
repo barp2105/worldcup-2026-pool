@@ -479,6 +479,21 @@
       "awayGoals": 1,
       "homePoints": 0,
       "awayPoints": 2
+    },
+    {
+      "id": "537359",
+      "stage": "GROUP",
+      "utcDate": "2026-06-20T17:00:00Z",
+      "homeCode": "NED",
+      "awayCode": "SWE",
+      "home": "הולנד",
+      "away": "שבדיה",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 5,
+      "awayGoals": 1,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
