@@ -434,6 +434,21 @@
       "awayGoals": 0,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537342",
+      "stage": "GROUP",
+      "utcDate": "2026-06-19T22:00:00Z",
+      "homeCode": "SCO",
+      "awayCode": "MAR",
+      "home": "סקוטלנד",
+      "away": "מרוקו",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "homePoints": 0,
+      "awayPoints": 2
     }
   ]
 }
