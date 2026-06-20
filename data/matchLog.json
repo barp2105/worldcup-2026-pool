@@ -449,6 +449,21 @@
       "awayGoals": 1,
       "homePoints": 0,
       "awayPoints": 2
+    },
+    {
+      "id": "537341",
+      "stage": "GROUP",
+      "utcDate": "2026-06-20T00:30:00Z",
+      "homeCode": "BRA",
+      "awayCode": "HAI",
+      "home": "ברזיל",
+      "away": "האיטי",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
