@@ -40,8 +40,8 @@
       "away": "בוסניה",
       "outcome": "DRAW",
       "duration": "REGULAR",
-      "homeGoals": 1,
-      "awayGoals": 1,
+      "homeGoals": null,
+      "awayGoals": null,
       "homePoints": 1,
       "awayPoints": 1
     },
@@ -491,6 +491,21 @@
       "outcome": "HOME",
       "duration": "REGULAR",
       "homeGoals": 5,
+      "awayGoals": 1,
+      "homePoints": 2,
+      "awayPoints": 0
+    },
+    {
+      "id": "537353",
+      "stage": "GROUP",
+      "utcDate": "2026-06-20T20:00:00Z",
+      "homeCode": "GER",
+      "awayCode": "CIV",
+      "home": "גרמניה",
+      "away": "חוף השנהב",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 2,
       "awayGoals": 1,
       "homePoints": 2,
       "awayPoints": 0
