@@ -539,6 +539,21 @@
       "awayGoals": 4,
       "homePoints": 0,
       "awayPoints": 2
+    },
+    {
+      "id": "537371",
+      "stage": "GROUP",
+      "utcDate": "2026-06-21T16:00:00Z",
+      "homeCode": "ESP",
+      "awayCode": "KSA",
+      "home": "ספרד",
+      "away": "ערב הסעודית",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 5,
+      "awayGoals": 0,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
