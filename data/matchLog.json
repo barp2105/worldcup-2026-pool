@@ -554,6 +554,21 @@
       "awayGoals": 0,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537365",
+      "stage": "GROUP",
+      "utcDate": "2026-06-21T19:00:00Z",
+      "homeCode": "BEL",
+      "awayCode": "IRN",
+      "home": "בלגיה",
+      "away": "איראן",
+      "outcome": "DRAW",
+      "duration": "REGULAR",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "homePoints": 1,
+      "awayPoints": 1
     }
   ]
 }
