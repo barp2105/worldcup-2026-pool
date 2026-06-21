@@ -524,6 +524,21 @@
       "awayGoals": 0,
       "homePoints": 1,
       "awayPoints": 1
+    },
+    {
+      "id": "537360",
+      "stage": "GROUP",
+      "utcDate": "2026-06-21T04:00:00Z",
+      "homeCode": "TUN",
+      "awayCode": "JPN",
+      "home": "תוניסיה",
+      "away": "יפן",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 0,
+      "awayGoals": 4,
+      "homePoints": 0,
+      "awayPoints": 2
     }
   ]
 }
