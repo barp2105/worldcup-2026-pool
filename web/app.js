@@ -220,7 +220,9 @@ function matchTitle(match, side) {
   const home = side === "home" ? `<b>${escapeHtml(match.home)}</b>` : escapeHtml(match.home);
   const away = side === "away" ? `<b>${escapeHtml(match.away)}</b>` : escapeHtml(match.away);
   if (match.homeGoals != null && match.awayGoals != null) {
-    return `${home} <span class="bd-score">${match.homeGoals}–${match.awayGoals}</span> ${away}`;
+    // הכותרת בכיוון RTL: הנבחרת הביתית מימין והאורחת משמאל. מספרים מוצגים תמיד
+    // משמאל לימין, ולכן כדי שכל נבחרת תופיע ליד השער שלה רושמים awayGoals–homeGoals.
+    return `${home} <span class="bd-score">${match.awayGoals}–${match.homeGoals}</span> ${away}`;
   }
   return `${home} נגד ${away}`;
 }
