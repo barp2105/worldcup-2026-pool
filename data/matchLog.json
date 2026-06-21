@@ -509,6 +509,21 @@
       "awayGoals": 1,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537354",
+      "stage": "GROUP",
+      "utcDate": "2026-06-21T00:00:00Z",
+      "homeCode": "ECU",
+      "awayCode": "CUW",
+      "home": "אקוודור",
+      "away": "קוראסאו",
+      "outcome": "DRAW",
+      "duration": "REGULAR",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "homePoints": 1,
+      "awayPoints": 1
     }
   ]
 }
