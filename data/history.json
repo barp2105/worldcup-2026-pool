@@ -2013,6 +2013,59 @@
           "matchesPlayed": 18
         }
       ]
+    },
+    {
+      "updatedAt": "2026-06-22T03:07:24.458Z",
+      "standings": [
+        {
+          "rank": 1,
+          "name": "ניב",
+          "points": 24,
+          "matchesPlayed": 22
+        },
+        {
+          "rank": 2,
+          "name": "עומר",
+          "points": 21,
+          "matchesPlayed": 19
+        },
+        {
+          "rank": 3,
+          "name": "בר",
+          "points": 20,
+          "matchesPlayed": 18
+        },
+        {
+          "rank": 3,
+          "name": "עומרי",
+          "points": 20,
+          "matchesPlayed": 21
+        },
+        {
+          "rank": 5,
+          "name": "אריאל",
+          "points": 19,
+          "matchesPlayed": 22
+        },
+        {
+          "rank": 5,
+          "name": "בנימין",
+          "points": 19,
+          "matchesPlayed": 20
+        },
+        {
+          "rank": 5,
+          "name": "פרטוש",
+          "points": 19,
+          "matchesPlayed": 20
+        },
+        {
+          "rank": 8,
+          "name": "יניב",
+          "points": 18,
+          "matchesPlayed": 18
+        }
+      ]
     }
   ]
 }

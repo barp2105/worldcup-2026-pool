@@ -584,6 +584,21 @@
       "awayGoals": 2,
       "homePoints": 1,
       "awayPoints": 1
+    },
+    {
+      "id": "537366",
+      "stage": "GROUP",
+      "utcDate": "2026-06-22T01:00:00Z",
+      "homeCode": "NZL",
+      "awayCode": "EGY",
+      "home": "ניו זילנד",
+      "away": "מצרים",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "homePoints": 0,
+      "awayPoints": 2
     }
   ]
 }
