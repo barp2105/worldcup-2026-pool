@@ -599,6 +599,21 @@
       "awayGoals": 3,
       "homePoints": 0,
       "awayPoints": 2
+    },
+    {
+      "id": "537399",
+      "stage": "GROUP",
+      "utcDate": "2026-06-22T17:00:00Z",
+      "homeCode": "ARG",
+      "awayCode": "AUT",
+      "home": "ארגנטינה",
+      "away": "אוסטריה",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
