@@ -674,6 +674,21 @@
       "awayGoals": 0,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537411",
+      "stage": "GROUP",
+      "utcDate": "2026-06-23T20:00:00Z",
+      "homeCode": "ENG",
+      "awayCode": "GHA",
+      "home": "אנגליה",
+      "away": "גאנה",
+      "outcome": "DRAW",
+      "duration": "REGULAR",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "homePoints": 1,
+      "awayPoints": 1
     }
   ]
 }
