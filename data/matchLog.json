@@ -614,6 +614,21 @@
       "awayGoals": 0,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537393",
+      "stage": "GROUP",
+      "utcDate": "2026-06-22T21:00:00Z",
+      "homeCode": "FRA",
+      "awayCode": "IRQ",
+      "home": "צרפת",
+      "away": "עיראק",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
