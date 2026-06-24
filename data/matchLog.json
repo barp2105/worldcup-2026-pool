@@ -734,6 +734,21 @@
       "awayGoals": 1,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537338",
+      "stage": "GROUP",
+      "utcDate": "2026-06-24T19:00:00Z",
+      "homeCode": "BIH",
+      "awayCode": "QAT",
+      "home": "בוסניה",
+      "away": "קטאר",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
