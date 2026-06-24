@@ -34,9 +34,11 @@ function renderStandings(data) {
   body.innerHTML = rows
     .map((s) => {
       const isLast = uniqueLast && s.rank === maxRank;
+      // לבנימין יש כבש קבוע ליד השם, בלי קשר למיקום (אם הוא אחרון – יתווסף עוד כבש מ-is-last).
+      const sheep = s.name.includes("בנימין") ? " 🐑" : "";
       return `<tr class="${rowClass(s, isLast)}">
         <td><span class="rank-badge">${s.rank}</span></td>
-        <td class="cell-name">${escapeHtml(s.name)}<button class="teams-btn" type="button" data-name="${escapeHtml(s.name)}" data-html2canvas-ignore="true">נבחרות</button></td>
+        <td class="cell-name">${escapeHtml(s.name)}${sheep}<button class="teams-btn" type="button" data-name="${escapeHtml(s.name)}" data-html2canvas-ignore="true">נבחרות</button></td>
         <td class="cell-points">${s.points}</td>
         <td class="cell-games">${s.matchesPlayed}</td>
       </tr>`;
