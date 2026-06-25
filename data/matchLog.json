@@ -751,6 +751,21 @@
       "awayPoints": 0
     },
     {
+      "id": "537343",
+      "stage": "GROUP",
+      "utcDate": "2026-06-24T22:00:00Z",
+      "homeCode": "SCO",
+      "awayCode": "BRA",
+      "home": "סקוטלנד",
+      "away": "ברזיל",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "homePoints": 0,
+      "awayPoints": 2
+    },
+    {
       "id": "537344",
       "stage": "GROUP",
       "utcDate": "2026-06-24T22:00:00Z",
