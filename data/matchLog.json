@@ -749,6 +749,21 @@
       "awayGoals": 1,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537344",
+      "stage": "GROUP",
+      "utcDate": "2026-06-24T22:00:00Z",
+      "homeCode": "MAR",
+      "awayCode": "HAI",
+      "home": "מרוקו",
+      "away": "האיטי",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
