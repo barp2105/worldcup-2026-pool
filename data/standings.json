@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T01:00:40.376Z",
+  "updatedAt": "2026-06-26T01:03:23.437Z",
   "standings": [
     {
       "rank": 1,
@@ -14,22 +14,22 @@
       "matchesPlayed": 27
     },
     {
-      "rank": 3,
+      "rank": 2,
       "name": "עומר",
-      "points": 29,
-      "matchesPlayed": 27
+      "points": 31,
+      "matchesPlayed": 29
     },
     {
-      "rank": 3,
-      "name": "פרטוש",
+      "rank": 4,
+      "name": "יניב",
       "points": 29,
       "matchesPlayed": 28
     },
     {
-      "rank": 5,
-      "name": "יניב",
-      "points": 28,
-      "matchesPlayed": 27
+      "rank": 4,
+      "name": "פרטוש",
+      "points": 29,
+      "matchesPlayed": 28
     },
     {
       "rank": 6,
@@ -46,8 +46,8 @@
     {
       "rank": 8,
       "name": "בנימין",
-      "points": 24,
-      "matchesPlayed": 27
+      "points": 25,
+      "matchesPlayed": 28
     }
   ]
 }

@@ -854,6 +854,21 @@
       "awayGoals": 3,
       "homePoints": 0,
       "awayPoints": 2
+    },
+    {
+      "id": "537362",
+      "stage": "GROUP",
+      "utcDate": "2026-06-25T23:00:00Z",
+      "homeCode": "JPN",
+      "awayCode": "SWE",
+      "home": "יפן",
+      "away": "שבדיה",
+      "outcome": "DRAW",
+      "duration": "REGULAR",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "homePoints": 1,
+      "awayPoints": 1
     }
   ]
 }
