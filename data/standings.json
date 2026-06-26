@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-06-25T22:03:23.222Z",
+  "updatedAt": "2026-06-26T01:00:40.376Z",
   "standings": [
     {
       "rank": 1,
+      "name": "ניב",
+      "points": 33,
+      "matchesPlayed": 32
+    },
+    {
+      "rank": 2,
       "name": "בר",
       "points": 31,
       "matchesPlayed": 27
-    },
-    {
-      "rank": 1,
-      "name": "ניב",
-      "points": 31,
-      "matchesPlayed": 31
     },
     {
       "rank": 3,
@@ -23,7 +23,7 @@
       "rank": 3,
       "name": "פרטוש",
       "points": 29,
-      "matchesPlayed": 27
+      "matchesPlayed": 28
     },
     {
       "rank": 5,
@@ -33,15 +33,15 @@
     },
     {
       "rank": 6,
-      "name": "עומרי",
+      "name": "אריאל",
       "points": 27,
-      "matchesPlayed": 27
+      "matchesPlayed": 32
     },
     {
-      "rank": 7,
-      "name": "אריאל",
-      "points": 25,
-      "matchesPlayed": 31
+      "rank": 6,
+      "name": "עומרי",
+      "points": 27,
+      "matchesPlayed": 28
     },
     {
       "rank": 8,
