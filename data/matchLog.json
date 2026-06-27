@@ -983,12 +983,12 @@
       "awayCode": "IRN",
       "home": "מצרים",
       "away": "איראן",
-      "outcome": "AWAY",
+      "outcome": "DRAW",
       "duration": "REGULAR",
       "homeGoals": 1,
-      "awayGoals": 2,
-      "homePoints": 0,
-      "awayPoints": 2
+      "awayGoals": 1,
+      "homePoints": 1,
+      "awayPoints": 1
     }
   ]
 }
