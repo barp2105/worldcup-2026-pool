@@ -989,6 +989,21 @@
       "awayGoals": 1,
       "homePoints": 1,
       "awayPoints": 1
+    },
+    {
+      "id": "537413",
+      "stage": "GROUP",
+      "utcDate": "2026-06-27T21:00:00Z",
+      "homeCode": "PAN",
+      "awayCode": "ENG",
+      "home": "פנמה",
+      "away": "אנגליה",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "homePoints": 0,
+      "awayPoints": 2
     }
   ]
 }
