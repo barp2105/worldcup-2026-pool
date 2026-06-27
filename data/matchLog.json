@@ -931,6 +931,21 @@
       "awayPoints": 0
     },
     {
+      "id": "537373",
+      "stage": "GROUP",
+      "utcDate": "2026-06-27T00:00:00Z",
+      "homeCode": "URU",
+      "awayCode": "ESP",
+      "home": "אורוגוואי",
+      "away": "ספרד",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "homePoints": 0,
+      "awayPoints": 2
+    },
+    {
       "id": "537374",
       "stage": "GROUP",
       "utcDate": "2026-06-27T00:00:00Z",
