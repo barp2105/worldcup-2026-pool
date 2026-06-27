@@ -901,6 +901,36 @@
       "awayPoints": 1
     },
     {
+      "id": "537395",
+      "stage": "GROUP",
+      "utcDate": "2026-06-26T19:00:00Z",
+      "homeCode": "NOR",
+      "awayCode": "FRA",
+      "home": "נורווגיה",
+      "away": "צרפת",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "homePoints": 0,
+      "awayPoints": 2
+    },
+    {
+      "id": "537396",
+      "stage": "GROUP",
+      "utcDate": "2026-06-26T19:00:00Z",
+      "homeCode": "SEN",
+      "awayCode": "IRQ",
+      "home": "סנגל",
+      "away": "עיראק",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 5,
+      "awayGoals": 0,
+      "homePoints": 2,
+      "awayPoints": 0
+    },
+    {
       "id": "537373",
       "stage": "GROUP",
       "utcDate": "2026-06-27T00:00:00Z",
