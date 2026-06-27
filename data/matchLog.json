@@ -974,6 +974,21 @@
       "awayGoals": 5,
       "homePoints": 0,
       "awayPoints": 2
+    },
+    {
+      "id": "537368",
+      "stage": "GROUP",
+      "utcDate": "2026-06-27T03:00:00Z",
+      "homeCode": "EGY",
+      "awayCode": "IRN",
+      "home": "מצרים",
+      "away": "איראן",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "homePoints": 0,
+      "awayPoints": 2
     }
   ]
 }
