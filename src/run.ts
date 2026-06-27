@@ -69,16 +69,24 @@ async function main(): Promise<void> {
   // (אותם משחקים, אותן תוצאות) אין diff וה-Action לא יוצר commit.
   await saveJson("matchLog.json", { matches: buildMatchLog(allMatches, rules, teams) });
 
+  // standings מחושב תמיד מהנתונים הנוכחיים — כך תיקוני API (שינוי תוצאה) יתגלגלו
+  // גם בריצות שבהן אין משחקים חדשים, ולא רק כשיש newMatches.
+  const ownerIndex = buildOwnerIndex(owners);
+  const { standings } = computeStandings(allMatches, rules, ownerIndex);
+
   if (newMatches.length === 0) {
-    console.log("אין משחקים חדשים — עודכן רק matchLog (אם השתנה).");
+    // שומרים standings רק אם הנתונים השתנו (מונע commit מיותר בגלל timestamp).
+    const stored = await loadJson<{ standings: unknown }>("standings.json");
+    if (JSON.stringify(standings) !== JSON.stringify(stored.standings)) {
+      await saveJson("standings.json", { updatedAt: new Date().toISOString(), standings });
+      console.log("תיקון API זוהה — standings עודכן.");
+    } else {
+      console.log("אין משחקים חדשים — עודכן רק matchLog (אם השתנה).");
+    }
     return;
   }
 
-  const ownerIndex = buildOwnerIndex(owners);
   const now = new Date();
-
-  // standings מלא מחושב מחדש מכל המשחקים שהסתיימו (idempotent).
-  const { standings } = computeStandings(allMatches, rules, ownerIndex);
   const lastUpdate = buildUpdate(newMatches, rules, ownerIndex, teams, now);
 
   const history = await loadJson<{ snapshots: unknown[] }>("history.json");

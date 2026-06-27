@@ -21,6 +21,17 @@ function rowClass(s, isLast) {
   return cls.join(" ");
 }
 
+function fitNameTexts() {
+  document.querySelectorAll(".name-text").forEach((el) => {
+    el.style.fontSize = "";
+    let size = parseFloat(getComputedStyle(el).fontSize);
+    while (el.scrollWidth > el.clientWidth && size > 9) {
+      size -= 0.5;
+      el.style.fontSize = size + "px";
+    }
+  });
+}
+
 function renderStandings(data) {
   const body = $("#standings-body");
   const rows = data.standings ?? [];
@@ -38,12 +49,14 @@ function renderStandings(data) {
       const sheep = s.name.includes("בנימין") ? " 🐑" : "";
       return `<tr class="${rowClass(s, isLast)}">
         <td><span class="rank-badge">${s.rank}</span></td>
-        <td class="cell-name">${escapeHtml(s.name)}${sheep}<button class="teams-btn" type="button" data-name="${escapeHtml(s.name)}" data-html2canvas-ignore="true">נבחרות</button></td>
+        <td class="cell-name"><span class="name-text">${escapeHtml(s.name)}${sheep}</span><button class="teams-btn" type="button" data-name="${escapeHtml(s.name)}" data-html2canvas-ignore="true">נבחרות</button></td>
         <td class="cell-points">${s.points}</td>
         <td class="cell-games">${s.matchesPlayed}</td>
       </tr>`;
     })
     .join("");
+
+  fitNameTexts();
 
   if (data.updatedAt) {
     $("#updated-at").textContent = "עודכן: " + formatDate(data.updatedAt);
