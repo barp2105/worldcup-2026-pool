@@ -1049,6 +1049,21 @@
       "awayGoals": 1,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537401",
+      "stage": "GROUP",
+      "utcDate": "2026-06-28T02:00:00Z",
+      "homeCode": "JOR",
+      "awayCode": "ARG",
+      "home": "ירדן",
+      "away": "ארגנטינה",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "homePoints": 0,
+      "awayPoints": 2
     }
   ]
 }
