@@ -991,6 +991,36 @@
       "awayPoints": 1
     },
     {
+      "id": "537413",
+      "stage": "GROUP",
+      "utcDate": "2026-06-27T21:00:00Z",
+      "homeCode": "PAN",
+      "awayCode": "ENG",
+      "home": "פנמה",
+      "away": "אנגליה",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "homePoints": 0,
+      "awayPoints": 2
+    },
+    {
+      "id": "537414",
+      "stage": "GROUP",
+      "utcDate": "2026-06-27T21:00:00Z",
+      "homeCode": "CRO",
+      "awayCode": "GHA",
+      "home": "קרואטיה",
+      "away": "גאנה",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "homePoints": 2,
+      "awayPoints": 0
+    },
+    {
       "id": "537407",
       "stage": "GROUP",
       "utcDate": "2026-06-27T23:30:00Z",
