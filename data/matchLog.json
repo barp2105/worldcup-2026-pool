@@ -1019,6 +1019,21 @@
       "awayGoals": 1,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537407",
+      "stage": "GROUP",
+      "utcDate": "2026-06-27T23:30:00Z",
+      "homeCode": "COL",
+      "awayCode": "POR",
+      "home": "קולומביה",
+      "away": "פורטוגל",
+      "outcome": "DRAW",
+      "duration": "REGULAR",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "homePoints": 1,
+      "awayPoints": 1
     }
   ]
 }
