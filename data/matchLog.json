@@ -1079,6 +1079,21 @@
       "awayGoals": 3,
       "homePoints": 1,
       "awayPoints": 1
+    },
+    {
+      "id": "537417",
+      "stage": "R32",
+      "utcDate": "2026-06-28T19:00:00Z",
+      "homeCode": "RSA",
+      "awayCode": "CAN",
+      "home": "דרום אפריקה",
+      "away": "קנדה",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "homePoints": 0,
+      "awayPoints": 2
     }
   ]
 }
