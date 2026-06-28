@@ -1034,6 +1034,21 @@
       "awayGoals": 0,
       "homePoints": 1,
       "awayPoints": 1
+    },
+    {
+      "id": "537408",
+      "stage": "GROUP",
+      "utcDate": "2026-06-27T23:30:00Z",
+      "homeCode": "COD",
+      "awayCode": "UZB",
+      "home": "קונגו",
+      "away": "אוזבקיסטאן",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
