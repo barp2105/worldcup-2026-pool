@@ -1094,6 +1094,21 @@
       "awayGoals": 1,
       "homePoints": 0,
       "awayPoints": 2
+    },
+    {
+      "id": "537423",
+      "stage": "R32",
+      "utcDate": "2026-06-29T17:00:00Z",
+      "homeCode": "BRA",
+      "awayCode": "JPN",
+      "home": "ברזיל",
+      "away": "יפן",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
