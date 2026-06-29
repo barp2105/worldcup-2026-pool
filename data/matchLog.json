@@ -1109,21 +1109,6 @@
       "awayGoals": 1,
       "homePoints": 2,
       "awayPoints": 0
-    },
-    {
-      "id": "537415",
-      "stage": "R32",
-      "utcDate": "2026-06-29T20:30:00Z",
-      "homeCode": "GER",
-      "awayCode": "PAR",
-      "home": "גרמניה",
-      "away": "פרגוואי",
-      "outcome": "HOME",
-      "duration": "REGULAR",
-      "homeGoals": 2,
-      "awayGoals": 1,
-      "homePoints": 2,
-      "awayPoints": 0
     }
   ]
 }
