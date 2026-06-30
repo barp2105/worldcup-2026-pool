@@ -1139,21 +1139,6 @@
       "awayGoals": 4,
       "homePoints": 1,
       "awayPoints": 2
-    },
-    {
-      "id": "537424",
-      "stage": "R32",
-      "utcDate": "2026-06-30T17:00:00Z",
-      "homeCode": "CIV",
-      "awayCode": "NOR",
-      "home": "חוף השנהב",
-      "away": "נורווגיה",
-      "outcome": "AWAY",
-      "duration": "REGULAR",
-      "homeGoals": 1,
-      "awayGoals": 2,
-      "homePoints": 0,
-      "awayPoints": 2
     }
   ]
 }
