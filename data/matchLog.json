@@ -1124,6 +1124,21 @@
       "awayGoals": 5,
       "homePoints": 1,
       "awayPoints": 2
+    },
+    {
+      "id": "537418",
+      "stage": "R32",
+      "utcDate": "2026-06-30T01:00:00Z",
+      "homeCode": "NED",
+      "awayCode": "MAR",
+      "home": "הולנד",
+      "away": "מרוקו",
+      "outcome": "AWAY",
+      "duration": "PENALTY_SHOOTOUT",
+      "homeGoals": 3,
+      "awayGoals": 4,
+      "homePoints": 1,
+      "awayPoints": 2
     }
   ]
 }
