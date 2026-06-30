@@ -28,6 +28,7 @@ interface RawMatch {
     winner?: string | null;
     duration?: string;
     fullTime?: { home?: number | null; away?: number | null };
+    penalties?: { home?: number | null; away?: number | null };
   };
 }
 
@@ -53,9 +54,20 @@ export function parseMatches(raw: RawMatch[], teams: TeamsMap): MatchResult[] {
     if (!stage) throw new Error(`שלב לא מוכר מה-API: ${m.stage} (משחק ${m.id})`);
 
     const winner = m.score?.winner ?? "DRAW";
-    const outcome: Outcome =
+    let outcome: Outcome =
       winner === "HOME_TEAM" ? "HOME" : winner === "AWAY_TEAM" ? "AWAY" : "DRAW";
     const duration = (m.score?.duration ?? "REGULAR") as Duration;
+
+    // משחק שהוכרע בפנדלים: football-data מחזיר winner="DRAW" כי תוצאת fullTime
+    // (אחרי 90'/120') שווה, וההכרעה נמצאת ב-score.penalties. גוזרים את המנצחת משם,
+    // אחרת תוצאת נוקאאוט תחזור כתיקו ותפיל את כל הריצה (תיקו אסור בנוקאאוט).
+    if (outcome === "DRAW" && duration === "PENALTY_SHOOTOUT") {
+      const ph = m.score?.penalties?.home;
+      const pa = m.score?.penalties?.away;
+      if (typeof ph === "number" && typeof pa === "number" && ph !== pa) {
+        outcome = ph > pa ? "HOME" : "AWAY";
+      }
+    }
 
     const homeName = m.homeTeam?.name ?? m.homeTeam?.shortName ?? "";
     const awayName = m.awayTeam?.name ?? m.awayTeam?.shortName ?? "";
