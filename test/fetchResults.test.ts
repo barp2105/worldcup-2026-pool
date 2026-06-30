@@ -67,4 +67,45 @@ describe("parseMatches — הכרעה בפנדלים", () => {
     expect(m!.outcome).toBe("HOME");
     expect(m!.duration).toBe("REGULAR");
   });
+
+  it("גוזר מנצח גם כש-duration לא תקני (PENALTIES) ו/או חסר", () => {
+    const weird = penaltyMatch({ home: 4, away: 2 });
+    weird.score.duration = "PENALTIES"; // וריאנט לא צפוי מה-API
+    const [m] = parseMatches([weird], teams);
+    expect(m!.outcome).toBe("HOME");
+    expect(m!.duration).toBe("PENALTY_SHOOTOUT"); // מנורמל → המפסידה תקבל נקודה
+    expect(pointsForMatch(m!, rules)).toEqual({ home: 2, away: 1 });
+  });
+
+  it("הוכרע בהארכה (אין פנדלים) → נגזר מ-fullTime, מפסידה מקבלת נקודת הארכה", () => {
+    const raw = {
+      id: "777",
+      status: "FINISHED",
+      stage: "LAST_32",
+      utcDate: "2026-07-01T19:00:00Z",
+      homeTeam: { name: "Argentina" },
+      awayTeam: { name: "Austria" },
+      // winner חסר, ההכרעה הייתה בהארכה (fullTime כולל את שער ההארכה)
+      score: { winner: null, duration: "EXTRA_TIME", fullTime: { home: 2, away: 1 } },
+    };
+    const [m] = parseMatches([raw], teams);
+    expect(m!.outcome).toBe("HOME");
+    expect(m!.duration).toBe("EXTRA_TIME");
+    expect(pointsForMatch(m!, rules)).toEqual({ home: 2, away: 1 });
+  });
+
+  it("משחק נוקאאוט שלא ניתן לפענוח מנצח → מדלג (לא מפיל את הריצה)", () => {
+    const unresolved = {
+      id: "666",
+      status: "FINISHED",
+      stage: "LAST_32",
+      utcDate: "2026-07-01T19:00:00Z",
+      homeTeam: { name: "Argentina" },
+      awayTeam: { name: "Austria" },
+      score: { winner: "DRAW", duration: "PENALTY_SHOOTOUT", fullTime: { home: 1, away: 1 } },
+    };
+    const good = penaltyMatch({ home: 5, away: 3 });
+    const out = parseMatches([unresolved, good], teams);
+    expect(out.map((x) => x.id)).toEqual(["999"]); // 666 דולג, 999 עובד
+  });
 });
