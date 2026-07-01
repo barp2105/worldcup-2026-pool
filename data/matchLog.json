@@ -1169,6 +1169,21 @@
       "awayGoals": 0,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537425",
+      "stage": "R32",
+      "utcDate": "2026-07-01T01:00:00Z",
+      "homeCode": "MEX",
+      "awayCode": "ECU",
+      "home": "מקסיקו",
+      "away": "אקוודור",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
