@@ -1184,6 +1184,21 @@
       "awayGoals": 0,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537426",
+      "stage": "R32",
+      "utcDate": "2026-07-01T16:00:00Z",
+      "homeCode": "ENG",
+      "awayCode": "COD",
+      "home": "אנגליה",
+      "away": "קונגו",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
