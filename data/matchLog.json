@@ -1199,6 +1199,21 @@
       "awayGoals": 1,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537422",
+      "stage": "R32",
+      "utcDate": "2026-07-01T20:00:00Z",
+      "homeCode": "BEL",
+      "awayCode": "SEN",
+      "home": "בלגיה",
+      "away": "סנגל",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
