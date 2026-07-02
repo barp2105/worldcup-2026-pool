@@ -35,6 +35,11 @@ interface RawMatch {
   };
 }
 
+/** האם שורת ניקוד קיימת עם שני מספרים (כלומר השלב הזה שוחק בפועל). */
+function hasScore(line: RawScoreLine): boolean {
+  return typeof line?.home === "number" && typeof line?.away === "number";
+}
+
 /** מחזיר "HOME"/"AWAY" אם שורת הניקוד מוכרעת (שני מספרים שונים), אחרת null. */
 function winnerOf(line: RawScoreLine): Outcome | null {
   const h = line?.home;
@@ -50,6 +55,22 @@ function normalizeDuration(raw: string | undefined): Duration {
   const d = (raw ?? "REGULAR").toUpperCase();
   if (d.startsWith("PENALT")) return "PENALTY_SHOOTOUT";
   if (d === "EXTRA_TIME" || d === "EXTRA" || d === "AET") return "EXTRA_TIME";
+  return "REGULAR";
+}
+
+/**
+ * קובע את משך המשחק בשלב נוקאאוט מתוך כל הרמזים הזמינים, ולא רק מתווית
+ * ה-duration של football-data (שהוכחה כלא-אמינה). זהו הבסיס לחוק הניקוד:
+ * המפסידה מקבלת נקודה רק אם המשחק נמשך מעבר ל-90' (תיקו ב-90').
+ * מזהים "מעבר ל-90'" לפי: קיום פנדלים / קיום שלב הארכה / תוצאת 90' שוויונית /
+ * תווית duration מתאימה.
+ */
+function resolveKnockoutDuration(score: RawMatch["score"], labeled: Duration): Duration {
+  const s = score;
+  const tiedAt90 = s?.regularTime != null && hasScore(s.regularTime) && !winnerOf(s.regularTime);
+
+  if (labeled === "PENALTY_SHOOTOUT" || hasScore(s?.penalties)) return "PENALTY_SHOOTOUT";
+  if (labeled === "EXTRA_TIME" || hasScore(s?.extraTime) || tiedAt90) return "EXTRA_TIME";
   return "REGULAR";
 }
 
@@ -79,30 +100,33 @@ export function parseMatches(raw: RawMatch[], teams: TeamsMap): MatchResult[] {
       winner === "HOME_TEAM" ? "HOME" : winner === "AWAY_TEAM" ? "AWAY" : "DRAW";
     let duration = normalizeDuration(m.score?.duration);
 
-    // משחק נוקאאוט לא יכול להסתיים בתיקו. כש-football-data לא ממלא winner
-    // (קורה כשההכרעה בהארכה/פנדלים — fullTime נשאר שווה), גוזרים את המנצחת
-    // מכל שדה ניקוד זמין, בלי תלות בערך duration (שלפעמים חסר/לא תקני).
-    if (outcome === "DRAW" && stage !== "GROUP") {
-      const s = m.score;
-      outcome =
-        winnerOf(s?.penalties) ??
-        winnerOf(s?.fullTime) ??
-        winnerOf(s?.extraTime) ??
-        winnerOf(s?.regularTime) ??
-        "DRAW";
-
-      // אם יש תוצאת פנדלים אבל ה-duration לא דיווח על כך — מתקנים, כדי שהמפסידה
-      // (שהגיעה להארכה ולא הפסידה ב-90') תקבל את נקודת ההארכה.
-      if (winnerOf(s?.penalties) && duration === "REGULAR") duration = "PENALTY_SHOOTOUT";
-
+    if (stage !== "GROUP") {
+      // משחק נוקאאוט לא יכול להסתיים בתיקו. כש-football-data לא ממלא winner
+      // (קורה כשההכרעה בהארכה/פנדלים — fullTime נשאר שווה), גוזרים את המנצחת
+      // מכל שדה ניקוד זמין, בלי תלות בערך duration (שלפעמים חסר/לא תקני).
       if (outcome === "DRAW") {
-        // לא ניתן לפענח מנצח — מדלגים על המשחק היחיד הזה במקום להפיל את כל הריצה
-        // (תיקו בנוקאאוט זורק שגיאה בשלב הניקוד). רושמים את ה-score הגולמי לאבחון.
-        console.error(
-          `⚠️ משחק נוקאאוט ${m.id} (${stage}) חזר ללא מנצח — מדלג. score גולמי: ${JSON.stringify(m.score)}`
-        );
-        continue;
+        const s = m.score;
+        outcome =
+          winnerOf(s?.penalties) ??
+          winnerOf(s?.fullTime) ??
+          winnerOf(s?.extraTime) ??
+          winnerOf(s?.regularTime) ??
+          "DRAW";
+
+        if (outcome === "DRAW") {
+          // לא ניתן לפענח מנצח — מדלגים על המשחק היחיד הזה במקום להפיל את כל
+          // הריצה (תיקו בנוקאאוט זורק שגיאה בניקוד). רושמים את ה-score לאבחון.
+          console.error(
+            `⚠️ משחק נוקאאוט ${m.id} (${stage}) חזר ללא מנצח — מדלג. score גולמי: ${JSON.stringify(m.score)}`
+          );
+          continue;
+        }
       }
+
+      // קובעים את משך המשחק מכל הרמזים בנתונים ולא רק מתווית football-data,
+      // כדי להבטיח שהמפסידה תקבל את נקודת ההארכה בכל פעם שהמשחק עבר את 90'
+      // (בין אם הוכרע בהארכה ובין אם בפנדלים).
+      duration = resolveKnockoutDuration(m.score, duration);
     }
 
     const homeName = m.homeTeam?.name ?? m.homeTeam?.shortName ?? "";
