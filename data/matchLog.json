@@ -1229,6 +1229,21 @@
       "awayGoals": 0,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537420",
+      "stage": "R32",
+      "utcDate": "2026-07-02T19:00:00Z",
+      "homeCode": "ESP",
+      "awayCode": "AUT",
+      "home": "ספרד",
+      "away": "אוסטריה",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
