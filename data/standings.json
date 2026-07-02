@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T04:08:19.646Z",
+  "updatedAt": "2026-07-02T04:09:23.167Z",
   "standings": [
     {
       "rank": 1,
@@ -10,7 +10,7 @@
     {
       "rank": 2,
       "name": "יניב",
-      "points": 43,
+      "points": 44,
       "matchesPlayed": 42
     },
     {
@@ -46,7 +46,7 @@
     {
       "rank": 8,
       "name": "אריאל",
-      "points": 37,
+      "points": 38,
       "matchesPlayed": 40
     }
   ]
