@@ -1209,11 +1209,11 @@
       "home": "בלגיה",
       "away": "סנגל",
       "outcome": "HOME",
-      "duration": "EXTRA_TIME",
+      "duration": "REGULAR",
       "homeGoals": 3,
       "awayGoals": 2,
       "homePoints": 2,
-      "awayPoints": 1
+      "awayPoints": 0
     },
     {
       "id": "537421",
