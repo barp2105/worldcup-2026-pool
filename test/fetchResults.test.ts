@@ -94,6 +94,48 @@ describe("parseMatches — הכרעה בפנדלים", () => {
     expect(pointsForMatch(m!, rules)).toEqual({ home: 2, away: 1 });
   });
 
+  it("הוכרע בהארכה אבל football-data תייג REGULAR → מזוהה מ-regularTime שוויוני", () => {
+    // תיקו 1-1 ב-90' (regularTime), שער בהארכה (fullTime 2-1), אבל התווית שגויה.
+    const raw = {
+      id: "555",
+      status: "FINISHED",
+      stage: "SEMI_FINALS",
+      utcDate: "2026-07-10T19:00:00Z",
+      homeTeam: { name: "Argentina" },
+      awayTeam: { name: "Austria" },
+      score: {
+        winner: "HOME_TEAM",
+        duration: "REGULAR", // תווית שגויה מה-API
+        fullTime: { home: 2, away: 1 },
+        regularTime: { home: 1, away: 1 },
+      },
+    };
+    const [m] = parseMatches([raw], teams);
+    expect(m!.outcome).toBe("HOME");
+    expect(m!.duration).toBe("EXTRA_TIME"); // זוהה שהמשחק עבר את 90'
+    expect(pointsForMatch(m!, rules)).toEqual({ home: 4, away: 1 }); // מפסידה מקבלת נקודה
+  });
+
+  it("הוכרע בזמן רגיל (regularTime לא שוויוני) → REGULAR, מפסידה 0", () => {
+    const raw = {
+      id: "444",
+      status: "FINISHED",
+      stage: "SEMI_FINALS",
+      utcDate: "2026-07-10T19:00:00Z",
+      homeTeam: { name: "Argentina" },
+      awayTeam: { name: "Austria" },
+      score: {
+        winner: "HOME_TEAM",
+        duration: "REGULAR",
+        fullTime: { home: 2, away: 0 },
+        regularTime: { home: 2, away: 0 },
+      },
+    };
+    const [m] = parseMatches([raw], teams);
+    expect(m!.duration).toBe("REGULAR");
+    expect(pointsForMatch(m!, rules)).toEqual({ home: 4, away: 0 });
+  });
+
   it("משחק נוקאאוט שלא ניתן לפענוח מנצח → מדלג (לא מפיל את הריצה)", () => {
     const unresolved = {
       id: "666",
