@@ -1,53 +1,53 @@
 {
-  "updatedAt": "2026-07-03T06:29:23.602Z",
+  "updatedAt": "2026-07-03T06:30:40.542Z",
   "standings": [
     {
       "rank": 1,
-      "name": "אריאל",
-      "points": 0,
-      "matchesPlayed": 0
-    },
-    {
-      "rank": 1,
-      "name": "בנימין",
-      "points": 0,
-      "matchesPlayed": 0
-    },
-    {
-      "rank": 1,
       "name": "בר",
-      "points": 0,
-      "matchesPlayed": 0
+      "points": 49,
+      "matchesPlayed": 42
     },
     {
-      "rank": 1,
+      "rank": 2,
       "name": "יניב",
-      "points": 0,
-      "matchesPlayed": 0
+      "points": 46,
+      "matchesPlayed": 44
     },
     {
-      "rank": 1,
-      "name": "ניב",
-      "points": 0,
-      "matchesPlayed": 0
-    },
-    {
-      "rank": 1,
-      "name": "עומר",
-      "points": 0,
-      "matchesPlayed": 0
-    },
-    {
-      "rank": 1,
-      "name": "עומרי",
-      "points": 0,
-      "matchesPlayed": 0
-    },
-    {
-      "rank": 1,
+      "rank": 3,
       "name": "פרטוש",
-      "points": 0,
-      "matchesPlayed": 0
+      "points": 44,
+      "matchesPlayed": 44
+    },
+    {
+      "rank": 4,
+      "name": "אריאל",
+      "points": 42,
+      "matchesPlayed": 42
+    },
+    {
+      "rank": 4,
+      "name": "ניב",
+      "points": 42,
+      "matchesPlayed": 41
+    },
+    {
+      "rank": 6,
+      "name": "בנימין",
+      "points": 41,
+      "matchesPlayed": 41
+    },
+    {
+      "rank": 6,
+      "name": "עומר",
+      "points": 41,
+      "matchesPlayed": 44
+    },
+    {
+      "rank": 6,
+      "name": "עומרי",
+      "points": 41,
+      "matchesPlayed": 42
     }
   ]
 }
