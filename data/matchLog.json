@@ -1274,6 +1274,21 @@
       "awayGoals": 0,
       "homePoints": 2,
       "awayPoints": 0
+    },
+    {
+      "id": "537428",
+      "stage": "R32",
+      "utcDate": "2026-07-03T18:00:00Z",
+      "homeCode": "AUS",
+      "awayCode": "EGY",
+      "home": "אוסטרליה",
+      "away": "מצרים",
+      "outcome": "AWAY",
+      "duration": "PENALTY_SHOOTOUT",
+      "homeGoals": 3,
+      "awayGoals": 5,
+      "homePoints": 1,
+      "awayPoints": 2
     }
   ]
 }
