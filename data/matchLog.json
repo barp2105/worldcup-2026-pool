@@ -1304,6 +1304,21 @@
       "awayGoals": 2,
       "homePoints": 2,
       "awayPoints": 1
+    },
+    {
+      "id": "537430",
+      "stage": "R32",
+      "utcDate": "2026-07-04T01:30:00Z",
+      "homeCode": "COL",
+      "awayCode": "GHA",
+      "home": "קולומביה",
+      "away": "גאנה",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "homePoints": 2,
+      "awayPoints": 0
     }
   ]
 }
