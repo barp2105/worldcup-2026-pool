@@ -1289,6 +1289,21 @@
       "awayGoals": 5,
       "homePoints": 1,
       "awayPoints": 2
+    },
+    {
+      "id": "537427",
+      "stage": "R32",
+      "utcDate": "2026-07-03T22:00:00Z",
+      "homeCode": "ARG",
+      "awayCode": "CPV",
+      "home": "ארגנטינה",
+      "away": "כף ורדה",
+      "outcome": "HOME",
+      "duration": "EXTRA_TIME",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "homePoints": 2,
+      "awayPoints": 1
     }
   ]
 }
