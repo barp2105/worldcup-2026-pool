@@ -1349,6 +1349,21 @@
       "awayGoals": 1,
       "homePoints": 0,
       "awayPoints": 3
+    },
+    {
+      "id": "537377",
+      "stage": "R16",
+      "utcDate": "2026-07-05T20:00:00Z",
+      "homeCode": "BRA",
+      "awayCode": "NOR",
+      "home": "ברזיל",
+      "away": "נורווגיה",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "homePoints": 0,
+      "awayPoints": 3
     }
   ]
 }
