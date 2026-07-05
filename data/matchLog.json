@@ -1334,21 +1334,6 @@
       "awayGoals": 3,
       "homePoints": 0,
       "awayPoints": 3
-    },
-    {
-      "id": "537375",
-      "stage": "R16",
-      "utcDate": "2026-07-04T21:00:00Z",
-      "homeCode": "PAR",
-      "awayCode": "FRA",
-      "home": "פרגוואי",
-      "away": "צרפת",
-      "outcome": "AWAY",
-      "duration": "REGULAR",
-      "homeGoals": 0,
-      "awayGoals": 1,
-      "homePoints": 0,
-      "awayPoints": 3
     }
   ]
 }
