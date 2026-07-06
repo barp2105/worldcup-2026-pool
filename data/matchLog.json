@@ -1379,6 +1379,21 @@
       "awayGoals": 3,
       "homePoints": 0,
       "awayPoints": 3
+    },
+    {
+      "id": "537379",
+      "stage": "R16",
+      "utcDate": "2026-07-06T19:00:00Z",
+      "homeCode": "POR",
+      "awayCode": "ESP",
+      "home": "פורטוגל",
+      "away": "ספרד",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "homePoints": 0,
+      "awayPoints": 3
     }
   ]
 }

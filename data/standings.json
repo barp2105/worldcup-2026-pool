@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T03:10:43.305Z",
+  "updatedAt": "2026-07-06T21:08:20.608Z",
   "standings": [
     {
       "rank": 1,
@@ -10,14 +10,14 @@
     {
       "rank": 2,
       "name": "יניב",
-      "points": 51,
-      "matchesPlayed": 47
+      "points": 54,
+      "matchesPlayed": 48
     },
     {
       "rank": 3,
       "name": "פרטוש",
       "points": 48,
-      "matchesPlayed": 48
+      "matchesPlayed": 49
     },
     {
       "rank": 4,
@@ -41,13 +41,13 @@
       "rank": 7,
       "name": "אריאל",
       "points": 45,
-      "matchesPlayed": 44
+      "matchesPlayed": 45
     },
     {
-      "rank": 8,
+      "rank": 7,
       "name": "עומרי",
-      "points": 42,
-      "matchesPlayed": 45
+      "points": 45,
+      "matchesPlayed": 46
     }
   ]
 }
