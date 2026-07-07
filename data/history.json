@@ -4822,6 +4822,59 @@
           "matchesPlayed": 45
         }
       ]
+    },
+    {
+      "updatedAt": "2026-07-07T18:11:21.241Z",
+      "standings": [
+        {
+          "rank": 1,
+          "name": "בר",
+          "points": 62,
+          "matchesPlayed": 51
+        },
+        {
+          "rank": 2,
+          "name": "יניב",
+          "points": 54,
+          "matchesPlayed": 48
+        },
+        {
+          "rank": 3,
+          "name": "בנימין",
+          "points": 53,
+          "matchesPlayed": 47
+        },
+        {
+          "rank": 4,
+          "name": "עומרי",
+          "points": 48,
+          "matchesPlayed": 48
+        },
+        {
+          "rank": 4,
+          "name": "פרטוש",
+          "points": 48,
+          "matchesPlayed": 50
+        },
+        {
+          "rank": 6,
+          "name": "ניב",
+          "points": 47,
+          "matchesPlayed": 45
+        },
+        {
+          "rank": 6,
+          "name": "עומר",
+          "points": 47,
+          "matchesPlayed": 46
+        },
+        {
+          "rank": 8,
+          "name": "אריאל",
+          "points": 45,
+          "matchesPlayed": 45
+        }
+      ]
     }
   ]
 }

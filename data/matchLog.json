@@ -1409,6 +1409,21 @@
       "awayGoals": 4,
       "homePoints": 0,
       "awayPoints": 3
+    },
+    {
+      "id": "537381",
+      "stage": "R16",
+      "utcDate": "2026-07-07T16:00:00Z",
+      "homeCode": "ARG",
+      "awayCode": "EGY",
+      "home": "ארגנטינה",
+      "away": "מצרים",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "homePoints": 3,
+      "awayPoints": 0
     }
   ]
 }
