@@ -1394,6 +1394,21 @@
       "awayGoals": 1,
       "homePoints": 0,
       "awayPoints": 3
+    },
+    {
+      "id": "537380",
+      "stage": "R16",
+      "utcDate": "2026-07-07T00:00:00Z",
+      "homeCode": "USA",
+      "awayCode": "BEL",
+      "home": "ארצות הברית",
+      "away": "בלגיה",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "homePoints": 0,
+      "awayPoints": 3
     }
   ]
 }
