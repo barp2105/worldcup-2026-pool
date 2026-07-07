@@ -1424,6 +1424,21 @@
       "awayGoals": 2,
       "homePoints": 3,
       "awayPoints": 0
+    },
+    {
+      "id": "537382",
+      "stage": "R16",
+      "utcDate": "2026-07-07T20:00:00Z",
+      "homeCode": "SUI",
+      "awayCode": "COL",
+      "home": "שווייץ",
+      "away": "קולומביה",
+      "outcome": "HOME",
+      "duration": "PENALTY_SHOOTOUT",
+      "homeGoals": 4,
+      "awayGoals": 3,
+      "homePoints": 3,
+      "awayPoints": 1
     }
   ]
 }
