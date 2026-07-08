@@ -1433,12 +1433,12 @@
       "awayCode": "COL",
       "home": "שווייץ",
       "away": "קולומביה",
-      "outcome": "HOME",
+      "outcome": "AWAY",
       "duration": "PENALTY_SHOOTOUT",
-      "homeGoals": 4,
-      "awayGoals": 3,
-      "homePoints": 3,
-      "awayPoints": 1
+      "homeGoals": 3,
+      "awayGoals": 4,
+      "homePoints": 1,
+      "awayPoints": 3
     }
   ]
 }
