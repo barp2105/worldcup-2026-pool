@@ -1439,6 +1439,21 @@
       "awayGoals": 3,
       "homePoints": 3,
       "awayPoints": 1
+    },
+    {
+      "id": "537383",
+      "stage": "QF",
+      "utcDate": "2026-07-09T20:00:00Z",
+      "homeCode": "FRA",
+      "awayCode": "MAR",
+      "home": "צרפת",
+      "away": "מרוקו",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "homePoints": 3,
+      "awayPoints": 0
     }
   ]
 }
