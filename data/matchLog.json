@@ -1454,6 +1454,21 @@
       "awayGoals": 0,
       "homePoints": 3,
       "awayPoints": 0
+    },
+    {
+      "id": "537384",
+      "stage": "QF",
+      "utcDate": "2026-07-10T19:00:00Z",
+      "homeCode": "ESP",
+      "awayCode": "BEL",
+      "home": "ספרד",
+      "away": "בלגיה",
+      "outcome": "HOME",
+      "duration": "REGULAR",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "homePoints": 3,
+      "awayPoints": 0
     }
   ]
 }
