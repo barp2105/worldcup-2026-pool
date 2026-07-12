@@ -1366,6 +1366,21 @@
       "awayPoints": 3
     },
     {
+      "id": "537378",
+      "stage": "R16",
+      "utcDate": "2026-07-06T01:00:00Z",
+      "homeCode": "MEX",
+      "awayCode": "ENG",
+      "home": "מקסיקו",
+      "away": "אנגליה",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "homePoints": 0,
+      "awayPoints": 3
+    },
+    {
       "id": "537379",
       "stage": "R16",
       "utcDate": "2026-07-06T19:00:00Z",
