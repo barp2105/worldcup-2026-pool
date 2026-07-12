@@ -1469,6 +1469,21 @@
       "awayGoals": 2,
       "homePoints": 1,
       "awayPoints": 3
+    },
+    {
+      "id": "537386",
+      "stage": "QF",
+      "utcDate": "2026-07-12T01:00:00Z",
+      "homeCode": "ARG",
+      "awayCode": "SUI",
+      "home": "ארגנטינה",
+      "away": "שווייץ",
+      "outcome": "HOME",
+      "duration": "EXTRA_TIME",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "homePoints": 3,
+      "awayPoints": 1
     }
   ]
 }
