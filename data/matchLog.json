@@ -1499,6 +1499,21 @@
       "awayGoals": 1,
       "homePoints": 3,
       "awayPoints": 1
+    },
+    {
+      "id": "537387",
+      "stage": "SF",
+      "utcDate": "2026-07-14T19:00:00Z",
+      "homeCode": "FRA",
+      "awayCode": "ESP",
+      "home": "צרפת",
+      "away": "ספרד",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "homePoints": 0,
+      "awayPoints": 4
     }
   ]
 }
