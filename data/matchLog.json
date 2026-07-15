@@ -1514,6 +1514,21 @@
       "awayGoals": 2,
       "homePoints": 0,
       "awayPoints": 4
+    },
+    {
+      "id": "537388",
+      "stage": "SF",
+      "utcDate": "2026-07-15T19:00:00Z",
+      "homeCode": "ENG",
+      "awayCode": "ARG",
+      "home": "אנגליה",
+      "away": "ארגנטינה",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "homePoints": 0,
+      "awayPoints": 4
     }
   ]
 }
