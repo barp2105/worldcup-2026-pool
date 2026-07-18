@@ -1529,6 +1529,21 @@
       "awayGoals": 2,
       "homePoints": 0,
       "awayPoints": 4
+    },
+    {
+      "id": "537389",
+      "stage": "THIRD",
+      "utcDate": "2026-07-18T21:00:00Z",
+      "homeCode": "FRA",
+      "awayCode": "ENG",
+      "home": "צרפת",
+      "away": "אנגליה",
+      "outcome": "AWAY",
+      "duration": "REGULAR",
+      "homeGoals": 4,
+      "awayGoals": 6,
+      "homePoints": 0,
+      "awayPoints": 2
     }
   ]
 }
