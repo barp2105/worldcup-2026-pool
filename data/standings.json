@@ -1,29 +1,29 @@
 {
-  "updatedAt": "2026-07-18T23:09:22.966Z",
+  "updatedAt": "2026-07-19T22:08:22.670Z",
   "standings": [
     {
       "rank": 1,
       "name": "בר",
-      "points": 75,
-      "matchesPlayed": 57
+      "points": 77,
+      "matchesPlayed": 58
     },
     {
       "rank": 2,
-      "name": "בנימין",
-      "points": 65,
+      "name": "יניב",
+      "points": 69,
       "matchesPlayed": 53
     },
     {
       "rank": 3,
-      "name": "יניב",
-      "points": 63,
-      "matchesPlayed": 52
+      "name": "בנימין",
+      "points": 67,
+      "matchesPlayed": 54
     },
     {
       "rank": 4,
       "name": "עומרי",
-      "points": 55,
-      "matchesPlayed": 51
+      "points": 61,
+      "matchesPlayed": 52
     },
     {
       "rank": 5,
